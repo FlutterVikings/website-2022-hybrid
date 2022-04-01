@@ -21,16 +21,16 @@ export default () => {
       <SEO />
       <Scene />
       <TheEvent />
-      <Committee />
+      {/* <Committee /> */}
       <Diversity />
-      <Speakers />
-      <Schedules />
-      <Moderators />
+      {/* <Speakers /> */}
+      {/* <Schedules /> */}
+      {/* <Moderators /> */}
       <Sponsors />
-      <Communities />
+      {/* <Communities /> */}
       {/* <Team /> */}
       <Venue />
-      <TheImportantNotice />
+      {/* <TheImportantNotice /> */}
     </Layout>
   );
 };

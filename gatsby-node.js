@@ -7,27 +7,26 @@ exports.onCreateNode = ({ node, actions }) => {
 };
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
-  const result = await graphql(`
-    query {
-      speakers: allSpeakersJson {
-        edges {
-          node {
-            id
-          }
-        }
-      }
-    }
-  `);
-
-  result.data.speakers.edges.forEach(({ node }) => {
-    createPage({
-      path: `/speakers/${node.id}`,
-      component: path.resolve(`./src/templates/speaker.tsx`),
-      context: {
-        speakerId: node.id,
-        slug: node.id,
-      },
-    });
-  });
+  // const { createPage } = actions;
+  // const result = await graphql(`
+  //   query {
+  //     speakers: allSpeakersJson {
+  //       edges {
+  //         node {
+  //           id
+  //         }
+  //       }
+  //     }
+  //   }
+  // `);
+  // result.data.speakers.edges.forEach(({ node }) => {
+  //   createPage({
+  //     path: `/speakers/${node.id}`,
+  //     component: path.resolve(`./src/templates/speaker.tsx`),
+  //     context: {
+  //       speakerId: node.id,
+  //       slug: node.id,
+  //     },
+  //   });
+  // });
 };
