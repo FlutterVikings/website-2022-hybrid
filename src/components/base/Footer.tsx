@@ -36,7 +36,9 @@ const Footer = () => {
             src="/assets/logo_invert.svg"
           />
           <div className="font__caesar SceneOverlay-footerTitle">Flutter Vikings</div>
-          <div className="font__caesar SceneOverlay-footerSubtitle">2022, Hybrid</div>
+          <div className="font__caesar SceneOverlay-footerSubtitle">
+            2022, Oslo, Norway
+          </div>
           <div className="font__caesar SceneOverlay-footerSubtitle">
             <a
               target="_blank"
