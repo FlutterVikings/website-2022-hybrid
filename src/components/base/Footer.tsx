@@ -50,7 +50,7 @@ const Footer = () => {
             and{' '}
             <a
               target="_blank"
-              href="https://feb22.fluttervikings.com"
+              href="https://feb2022.fluttervikings.com"
               rel={'noreferrer noopener nofollow'}
             >
               Online'Feb22 website
