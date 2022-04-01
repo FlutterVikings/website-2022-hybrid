@@ -54,7 +54,7 @@ const Scene = () => {
               className="Btn Btn--ticket Btn--cta"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://fluttervikings.com/tickets"
+              href="https://fluttervikings.com/ticket"
             >
               Tickets
             </a>{' '}
