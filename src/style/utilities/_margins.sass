@@ -1,0 +1,26 @@
+$padding-small: 25px
+$padding-large: 50px
+$padding-huge: 100px
+
+.u-paddingSmall
+  padding-bottom: $padding-small * 0.5
+  +media-sm
+    padding-bottom: $padding-small
+
+.u-paddingAlwaysSmall
+  padding-bottom: $padding-small
+
+.u-paddingLarge
+  padding-bottom: $padding-large * 0.5
+  +media-sm
+    padding-bottom: $padding-large
+
+.u-paddingHuge
+  padding-bottom: $padding-huge * 0.5
+  +media-sm
+    padding-bottom: $padding-huge
+
+.u-marginHuge
+  margin-bottom: $padding-huge * 0.5
+  +media-sm
+    margin-bottom: $padding-huge

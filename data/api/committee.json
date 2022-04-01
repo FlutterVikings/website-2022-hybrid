@@ -1,0 +1,63 @@
+[
+  {
+    "id": "yong_shean",
+    "name": "Yong Shean",
+    "title": "Flutter GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/",
+      "github": "",
+      "linkedin": ""
+    },
+    "bio": "Yong Shean is a frontend engineer who has been working full time on Flutter projects for more than two years. She often shares about Flutter in talks and blog articles. She is also a director of Women Who Code Kuala Lumpur, a global non-profit organisation that aims to empower women to excel in tech, and the organiser of Learn Flutter Together study group."
+  },
+  {
+    "id": "lara_martin",
+    "name": "Lara Martin",
+    "title": "Flutter/Dart GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/larikimc",
+      "github": "",
+      "linkedin": ""
+    },
+    "bio": "Lara is a self-made Mobile Developer and Flutter GDE living in the German countryside. She’s part of the Flutter Ecosystem Committee, the team in charge of selecting Flutter Favorite packages. She has been doing public speaking since 2018, has both spoken and been committee member at multiple international conferences. She loves sketchnoting, spending time with her dog Lily and building apps that improve the lives of their users"
+  },
+
+  {
+    "id": "miguel_beltran",
+    "name": "Miguel Beltran",
+    "title": "Flutter Freelancer",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/MiBLT",
+      "github": "",
+      "linkedin": ""
+    },
+    "bio": "Miguel is a Software Developer Freelancer specialized in Flutter. He collaborates with the Flutter team as a contractor, improving the documentation of Flutter and Dart websites. He is also one of the maintainers of plus_plugins, and has been a public speaker since 2016 when he started volunteering at local GDG communities. He works remotely from the German countryside with his partner Lara and their dog Lily."
+  },
+  {
+    "id": "elaine_dias_batista",
+    "name": "Elaine Dias Batista",
+    "title": "Flutter GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/shin_chong",
+      "github": "",
+      "linkedin": ""
+    },
+    "bio": "Elaine is a Team Leader at SFEIR where she works on projects consisting of mobile and voice technologies. She's passionate about Android dev since 2013, having worked in several projects in native Android but also native iOS. She's particularly interested by voice technologies and its integration in mobile apps. Since 2018, her new passion is Flutter but she's still interested in native development and all of its possibilities :) She's a GDE for the Google Assistant, Flutter and Dart."
+  },
+  {
+    "id": "rihanna_kedir",
+    "name": "Rihanna Kedir",
+    "title": "Flutter GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/rihanna_ke",
+      "github": "",
+      "linkedin": ""
+    },
+    "bio": "Rihanna is a Software Engineer and crafter. She is a women tech-makers ambassador as well as a GDG lead and Google developer expert in Web, Dart, and Flutter. Rihanna strongly believes in the importance of sharing knowledge and experience; in her free time, she volunteers as a mentor and often organizes various tech events. She also enjoys designing and handcrafting, as well as learning and experimenting with new technologies. "
+  }
+]

@@ -1,0 +1,87 @@
+$btn-ticket-border-color: #e1ad30
+$btn-ticket-bg: linear-gradient(to bottom, #ffde66, darken(#facc26, 10%))
+$btn-cfp-bg: linear-gradient(to bottom, $color-logo-light-blue, $color-logo-dark-blue)
+$btn-ticket-text-color: #9f4c00
+
+.Btn
+  +font-text
+  height: 50px
+  line-height: 50px
+  -webkit-font-smoothing: antialiased
+  -webkit-appearance: none
+  display: inline-block
+  padding: 0 $space-small
+  border: none
+  border-radius: 10px
+  transition: all 0.3s ease-in-out
+  text-transform: uppercase
+  text-decoration: none
+  cursor: pointer
+
+.Btn--regular
+  color: $color-white
+  padding: 0 $space-small
+  background: $color-green
+  &:hover
+    background: darken($color-green, 10%)
+
+.Btn--navLink
+  color: $color-white
+.day .Btn--navLink
+  color: $color-green
+  background-color: transparent
+.night .Btn--navLink
+  color: $color-white
+  background-color: transparent
+.Nav--scrolled,
+.Nav--alwaysOpaque,
+.Nav--open
+  .Btn--navLink
+    color: $color-white
+
+
+
+.Btn--bordered
+  border: solid 1px $color-white
+
+.Btn--ticket
+  display: inline-block
+  background: $btn-ticket-bg
+  border: none
+  color: $btn-ticket-text-color
+  box-shadow: 0 3px 0px #e1aa26
+  text-shadow: 0 1px #fae9e8
+  transition: all 0.3s
+  background-size: 1% 200%
+  &:hover
+    background-position: 0% 100%
+
+.Btn--cfp
+  display: inline-block
+  background: $btn-cfp-bg
+  border: none
+  color: $color-white
+  box-shadow: 0 3px 0px $color-logo-dark-blue
+  text-shadow: 0 1px $color-logo-light-blue
+  transition: all 0.3s
+  background-size: 1% 200%
+  &:hover
+    background-position: 0% 100%    
+
+.Btn--alternate
+  border: solid 1px $color-blue
+  color: $color-blue
+  background-color: $color-white
+  &:hover
+    color: $color-white
+    background-color: $color-blue
+
+.Btn--cta
+  height: 60px
+  line-height: 60px
+  vertical-align: middle
+  @include serif
+  +media-xs
+    +font-text
+  +media-md
+    +font-title

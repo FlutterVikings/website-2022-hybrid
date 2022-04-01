@@ -1,0 +1,31 @@
+$anim-cloudTranslateTime-back: 7000s
+$anim-cloudTranslateTime-front: 4000s
+$anim-scene-time: 2s
+$anim-cloudFade-time: 10s
+
+.Scene--animated
+  .Scene-clouds
+    +transform(translate3d(-90%, 0, 0))
+  .Scene-mountains
+    transform: translate3d(0, 100%, 0)
+  .Scene-town
+    transform: translate3d(0, 100%, 0)
+  .Scene-sun
+    transform: translate3d(0, 120%, 0)
+
+  +keyframes(animCloudsWrapper)
+    from
+      opacity: 0
+    to
+      opacity: 1
+
+  .Scene-cloudsWrapper,
+  .Scene-stars
+    opacity: 0
+
+  .SceneOverlay,
+    opacity: 0
+
+.Nav:not(.Nav--alwaysOpaque)
+  .Nav-barMenu
+    opacity: 1

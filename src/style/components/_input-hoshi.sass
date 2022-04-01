@@ -1,0 +1,79 @@
+.InputHoshi
+  position: relative
+  display: inline-block
+  +media-xs-only
+    margin-top: $space-small
+
+.InputHoshi-field
+  position: relative
+  display: block
+  width: calc(90% - 0.5em)
+  padding: 0 0.25em
+  line-height: 50px
+  border: none
+  background: transparent
+  +font-text
+  color: $color-white
+  font-weight: bold
+  -webkit-appearance: none /* for box shadows to show on iOS */
+  &:focus
+    outline: none
+  &::placeholder
+    color: $color-white  
+
+
+.InputHoshi-label
+  position: absolute
+  width: calc(90% - 0.5em)
+  height: calc(100% - 1em)
+  bottom: 0
+  padding: 0 0.25em 4px
+  +font-text
+  color: $color-white
+  pointer-events: none
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  -webkit-touch-callout: none
+  +user-select(none)
+
+.InputHoshi-labelContent
+  position: absolute
+
+.InputHoshi-border
+  position: absolute
+  left: 0
+  width: 100%
+  height: 22px
+  padding-bottom: 9px
+  border-bottom: 1px solid $color-yellow
+
+.InputHoshi-border:after
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 22px
+  padding-bottom: 9px
+
+.InputHoshi--nav
+  .InputHoshi-border,
+  .InputHoshi-border:after
+    border-color: $color-white
+
+.InputHoshi-labelContent,
+.InputHoshi-border:after
+  +transition(transform 0.3s)
+  transform-origin: left
+
+.InputHoshi-border:after
+  border-bottom: 4px solid $color-yellow
+  +transform(scaleX(0))
+
+.InputHoshi-field:focus,
+.InputHoshi--filled
+  .InputHoshi-border:after
+    +transform(scaleX(1))
+
+  .InputHoshi-labelContent
+    +transform(translateY(-140%))

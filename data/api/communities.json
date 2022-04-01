@@ -1,0 +1,55 @@
+[{
+        "id": "flutter_oslo",
+        "name": "Flutter Oslo",
+        "level": 1,
+        "link": ""
+    },
+    {
+        "id": "flutter_stavanger",
+        "name": "Flutter Stavanger",
+        "level": 1,
+        "link": ""
+    },
+    {
+        "id": "gdg_oslo",
+        "name": "GDG Oslo",
+        "level": 1,
+        "link": ""
+    },
+    {
+        "id": "mobile_meetup_olso",
+        "name": "Mobile Oslo",
+        "level": 1,
+        "link": ""
+    },
+    {
+        "id": "gdg_western_sweeden",
+        "name": "GDG Western Sweeden",
+        "level": 1,
+        "link": "https://www.meetup.com/GDGWestSweden/"
+    },
+    {
+        "id": "flutter_cph",
+        "name": "Flutter Copenhagen",
+        "level": 1,
+        "link": "https://gdg.community.dev/gdg-copenhagen/"
+    },
+    {
+        "id": "flutter_stocholm",
+        "name": "Flutter Stockholm",
+        "level": 1,
+        "link": ""
+    },
+    {
+        "id": "gdg_cph",
+        "name": "GDG Copenhagen",
+        "level": 1,
+        "link": "https://gdg.community.dev/gdg-copenhagen/"
+    },
+    {
+        "id": "gdg_aalborg",
+        "name": "GDG Aalborg",
+        "level": 1,
+        "link": "https://gdg.community.dev/gdg-aalborg/"
+    }
+]

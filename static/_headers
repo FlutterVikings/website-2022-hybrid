@@ -1,0 +1,3 @@
+/*
+  X-Frame-Options: ALLOW-FROM https://meet.welkom.world
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline';

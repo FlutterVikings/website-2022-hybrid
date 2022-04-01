@@ -1,0 +1,142 @@
+$star-number: 150;
+$stars-current: 0;
+$var-wave: 1300;
+$wave-margin: calc(-#{$var-wave}px / 1);
+@function get-vw($target) {
+  $vw-context: (1000 * 0.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+$aur-number: get-vw(72px);
+
+.night {
+  .bg {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    height: 100vh;
+    max-height: 400px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    .auror_bg {
+      position: absolute;
+      left: -50%;
+      top: -50%;
+      width: 200%;
+      height: 200%;
+      max-width: 2400px;
+      max-height: 2400px;
+      animation-name: northern;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      background: linear-gradient(
+        rgba(102, 255, 153, 0.2) 10%,
+        rgb(55, 0, 55) 15%,
+        black 100%
+      );
+    }
+    .aur_cont {
+      margin: -65px auto 0;
+      display: table;
+      height: auto;
+
+      .aur {
+        transform: skew(-0.06turn, 18deg);
+        display: block;
+        width: 0;
+        min-height: 100px;
+        float: left;
+        margin-left: 40px;
+        border-radius: 5% 52% 30px 20px;
+        opacity: 0.6;
+
+        @for $i from 1 through 24 {
+          &.aur_#{$i} {
+            box-shadow: rgb(75, random(255) + 100, random(255) + 60) 0px 0px 100px 20px;
+            margin-top: random(140) - 40 + px;
+            animation: topup random(10000) + 3000 + ms infinite linear;
+          }
+        }
+      }
+    }
+  }
+}
+
+.wave {
+  width: 100vw;
+  max-width: 1200px;
+  max-height: 1200px;
+  background: white;
+  height: 100vw;
+  display: block;
+  border-radius: 47%;
+  opacity: 0.1;
+  box-shadow: white 0 0 30px 10px;
+  position: absolute;
+  margin: $wave-margin auto 0;
+}
+
+.wave.wave_1 {
+  animation: drift 9000ms infinite linear;
+}
+.wave.wave_2 {
+  animation: drift 15000ms infinite linear;
+  border-radius: 46%;
+  margin: calc(#{$wave-margin} - 2%) auto 0;
+}
+.wave.wave_3 {
+  animation: drift 7000ms infinite linear;
+  color: mintcream;
+  opacity: 0.1;
+  margin: calc(#{$wave-margin} - 10%) auto 0;
+}
+.wave.wave_4 {
+  animation: drift 7000ms infinite linear;
+  opacity: 0.1;
+  margin: calc(#{$wave-margin} - 5%) auto 0;
+}
+
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes topup {
+  0%,
+  100% {
+    transform: translatey(30px);
+  }
+  50% {
+    transform: translatey(100px);
+  }
+}
+
+@keyframes northern {
+  0% {
+    transform: translate(5%, -2%);
+  }
+  25% {
+    transform: translate(10%, 7%);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: translate(7%, -2%);
+  }
+  85% {
+    transform: translate(6%, 3%) rotate(12deg);
+  }
+  100% {
+    transform: none;
+  }
+}

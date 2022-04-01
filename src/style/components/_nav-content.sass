@@ -1,0 +1,60 @@
+$nav-media-break: "min-width: 960px"
+
+.NavContent
+  color: $color-white
+  overflow-y: auto
+  height: 101%
+
+.NavContent-row,
+.NavContent-bottom
+  +media-large-menu
+    display: flex
+    justify-content: center
+    align-items: center
+    
+.NavContent-section
+  +media-xs-only
+    width: 80%
+    margin: 0 auto $space-base auto
+
+  +media-sm
+    // width: 350px
+    padding: $space-base
+
+.NavContent-title
+  +font-responsive-title
+  border-bottom: solid 1px $color-white
+  max-width: 400px
+
+.NavContent-items
+  +sans-serif
+  +font-responsive-title
+  text-transform: uppercase
+  list-style-type: none
+
+.NavContent-item
+  max-width: 400px
+  padding-top: $space-small
+
+.NavContent-item,
+.NavContent-bottom
+  a
+    text-decoration: none
+    color: $color-white
+    white-space: nowrap
+    &:hover
+      text-decoration: underline
+  +media-xs-only
+    padding-top: $space-small * 0.5
+
+.NavContent-bottom
+  margin: 0 auto $space-base auto
+  width: 80%
+  +font-responsive-title
+  +media-large-menu
+    display: flex
+
+  .NavContent-item
+    display: inline-block
+  .NavContent-item:not(:last-child)
+    margin-right: $space-base

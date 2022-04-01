@@ -1,0 +1,11 @@
+[build]
+  publish = "public"
+  command = "npm run build"
+[build.environment]
+  YARN_FLAGS = "--no-ignore-optional"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "ALLOW-FROM https://meet.welkom.world"
+    X-XSS-Protection = "1; mode=block"

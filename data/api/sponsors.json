@@ -1,0 +1,100 @@
+[
+  {
+    "id": "google",
+    "name": "Google",
+    "level": 1,
+    "link": "https://bit.ly/3ps1AeP"
+  },
+
+  {
+    "id": "manning",
+    "name": "Manning",
+    "level": 3,
+    "link": "https://bit.ly/38F5yuX"
+  },
+  {
+    "id": "microsoft",
+    "name": "Microsoft",
+    "level": 3,
+    "link": "https://bit.ly/3IyYnnx"
+  },
+  {
+    "id": "invertase",
+    "dark": "invertase-light",
+    "name": "Invertase",
+    "level": 1,
+    "link": "https://bit.ly/3E3vCML"
+  },
+  {
+    "id": "stream",
+    "name": "Stream.io Inc",
+    "level": 1,
+    "link": "https://bit.ly/2Iphmq6"
+  },
+  {
+    "id": "codemagic",
+    "name": "Code Magic",
+    "level": 1,
+    "link": "https://bit.ly/3oE9qUj"
+  },
+  {
+    "id": "theatcompany",
+    "name": "The @ Company",
+    "level": 2,
+    "link": "https://bit.ly/36uvtT6"
+  },
+  {
+    "id": "vgv",
+    "dark": "vgv-light",
+    "name": "Very Good Ventures",
+    "level": 2,
+    "link": "https://bit.ly/3CaUy4s"
+  },
+  {
+    "id": "softiware",
+    "name": "Softiware AS",
+    "level": 2,
+    "link": "https://bit.ly/32E8LXS"
+  },
+  {
+    "id": "devangels",
+    "dark": "devangels-light",
+    "name": "DebAngels London",
+    "level": 2,
+    "link": "https://bit.ly/3n3lv4s"
+  },
+  {
+    "id": "superlist",
+    "name": "Superlist",
+    "level": 1,
+    "link": "https://bit.ly/3pL7UPE"
+  },
+  {
+    "id": "bouvet",
+    "dark": "bouvet_light",
+    "name": "Bouvet",
+    "level": 2,
+    "link": "https://bit.ly/35cCc7z"
+  },
+  {
+    "id": "ot_hovedlogo",
+    "dark": "ot_hovedlogo_light",
+    "name": "Olavstoppen",
+    "level": 2,
+    "link": "https://bit.ly/3Iqvrxd"
+  },
+  {
+    "id": "rebelappstudio",
+    "dark": "rebelappstudio",
+    "name": "Rebel app studio",
+    "level": 1,
+    "link": "https://bit.ly/3g6X9Ty"
+  },
+  {
+    "id": "cloudinary",
+    "dark": "cloudinary_light",
+    "name": "Cloudinary",
+    "level": 3,
+    "link": "https://bit.ly/34K3JNe"
+  }
+]

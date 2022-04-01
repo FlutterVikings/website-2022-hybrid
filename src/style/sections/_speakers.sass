@@ -1,0 +1,23 @@
+.Speakers
+  background-color: $color-white
+  margin-bottom: 50px
+
+.Speakers-title
+  +font-title
+  color: $color-blue
+  margin-bottom: $space-base
+
+.Speakers-list
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  margin: auto
+  width: 100%
+  @media (min-width: 400px) and (max-width: 800px)
+    width: 400px
+  @media (min-width: 800px) and (max-width: 1200px)
+    width: 800px
+  @media (min-width: 1200px) and (max-width: 1600px)
+    width: 1200px
+  @media (min-width: 1600px)
+    width: 1600px

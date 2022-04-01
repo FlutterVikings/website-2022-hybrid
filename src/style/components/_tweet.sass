@@ -1,0 +1,49 @@
+$tweet-profile-picture-size: 50px
+$tweet-picture-border-radius: 50%
+
+.Tweet
+  +sans-serif
+  +font-text
+  border-left: solid 4px $color-twitter-blue
+  padding-left: $space-small
+  display: block
+  text-decoration: none
+
+.Tweet-author
+  display: flex
+  flex-direction: row
+  align-items: center
+
+.Tweet-picture
+  width: $tweet-profile-picture-size
+  height: $tweet-profile-picture-size
+  min-width: $tweet-profile-picture-size
+  min-height: $tweet-profile-picture-size
+  border-radius: $tweet-picture-border-radius
+  margin-right: $space-small
+
+  +media-sm-md
+    display: none
+
+.Tweet-authorInformation
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+
+.Tweet-authorName
+  color: $color-twitter-blue
+  font-weight: bold
+  white-space: nowrap
+
+.Tweet-authorHandle
+  color: $color-yellow
+
+.Tweet-text
+  margin-top: $space-small
+  color: $color-blue
+
+.Tweet-date
+  margin-top: $space-base
+  color: $color-grey
+  font-size: $theme-font-small
+  text-transform: uppercase

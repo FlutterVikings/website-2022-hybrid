@@ -1,0 +1,23 @@
+$paragraph-margin: 2px
+$ticket-information-header-height: 165px
+$ticket-information-paragraph-height: 110px
+
+.TicketInformation
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  font-size: $theme-font-text
+  +sans-serif
+
+.TicketInformation-header
+  height : $ticket-information-header-height
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+.TicketInformation-paragraph
+  height : $ticket-information-paragraph-height
+  display: flex
+  flex-direction: column
+  justify-content: center
+  margin-top: $paragraph-margin

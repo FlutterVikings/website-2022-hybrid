@@ -1,0 +1,62 @@
+$media-xs-only: "max-width: 768px"
+$media-sm: "min-width: 768px"
+$media-md: "min-width: 1024px"
+$media-md-only: "max-width: 1023px"
+$media-lg: "min-width: 1200px"
+
+@mixin media-xs
+  @content
+
+@mixin media-xs-only
+  @media ($media-xs-only)
+    @content
+
+@mixin media-sm
+  @media ($media-sm)
+    @content
+
+@mixin media-md
+  @media ($media-md)
+    @content
+
+@mixin media-sm-md
+  @media ($media-md-only) and ($media-sm)
+    @content
+
+@mixin media-lg
+  @media ($media-lg)
+    @content
+
+@mixin media-large-menu
+  @media ($nav-media-break)
+    @content
+
+@mixin media-portrait
+  @media (orientation: portrait)
+    @content
+
+@mixin media-landscape
+  @media (orientation: landscape)
+    @content
+
+.u-xs-hidden
+  +media-xs-only
+    display: none
+
+.u-sm-hidden
+  +media-xs
+    display: none
+  +media-md
+    display: block
+
+.u-md-hidden
+  +media-xs
+    display: none
+  +media-lg
+    display: block
+
+.u-md-only
+  +media-xs
+    display: block
+  +media-lg
+    display: none

@@ -1,0 +1,49 @@
+
+<svg width="857px" height="142px" viewBox="0 0 857 142" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo-transparent-bg" transform="translate(1.000000, -9.000000)">
+            <g id="Group-3" transform="translate(398.000000, 0.000000)">
+                <g id="The-art-of-software" transform="translate(0.000000, 125.000000)" fill="#032535" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="The-art-of-software-can-code-your-dream-world">
+                        <tspan x="0" y="21">The art of software can code your dream world</tspan>
+                    </text>
+                </g>
+                <g id="SOFT" transform="translate(2.000000, 31.000000)" fill="#032535" font-family="Helvetica" font-size="77" font-weight="normal">
+                    <text>
+                        <tspan x="0" y="74">SOFT</tspan>
+                    </text>
+                </g>
+                <g id="WARE" transform="translate(234.000000, 31.000000)" fill="#032535" font-family="Helvetica" font-size="77" font-weight="normal">
+                    <text>
+                        <tspan x="0" y="74">WARE</tspan>
+                    </text>
+                </g>
+                <polygon id="Path-4" stroke="#F5BE58" fill="#F5BE58" fill-rule="nonzero" points="228 51 208 51 208 105 228 105"></polygon>
+                <g id="Group-Cube" transform="translate(216.514724, 27.906051) rotate(-32.000000) translate(-216.514724, -27.906051) translate(198.514724, 7.406051)" fill="#F5BE58" fill-rule="nonzero">
+                    <polygon id="Path" transform="translate(17.645028, 30.061983) rotate(-178.000000) translate(-17.645028, -30.061983) " points="17.6532782 20.2612717 0.413711384 29.9710826 17.6532782 39.8626952 34.8763449 30.0619835"></polygon>
+                    <polygon id="Path-2" transform="translate(26.800784, 15.663731) rotate(-178.000000) translate(-26.800784, -15.663731) " points="18.2171542 0.987623403 18.2171542 20.4377875 35.384414 30.3398393 35.384414 10.8212394"></polygon>
+                    <polygon id="Path-3" transform="translate(9.487920, 14.987983) rotate(-178.000000) translate(-9.487920, -14.987983) " points="0.904290302 10.1689595 18.0715501 0.383000707 18.0715501 20.0045957 0.912509664 29.5929652"></polygon>
+                </g>
+            </g>
+            <g id="Group" transform="translate(0.000000, 10.000000)" fill-rule="nonzero">
+                <g id="Shape-left" stroke-linejoin="round" transform="translate(0.000000, 11.006693)" fill="#032535" stroke="#032535">
+                    <polygon id="Path-2" points="75.194977 31.121835 75.194977 0.547383786 6.52212459e-17 40.7934763 0 66.6935609 4.76436777 71.8735778"></polygon>
+                    <polygon id="Path-3" points="75.5579323 78.780267 34.4955065 54.6068547 4.76436777 71.8735778 75.5579323 109.860368"></polygon>
+                </g>
+                <g id="Shape-right" stroke-linejoin="round" transform="translate(202.370787, 66.513721) rotate(180.000000) translate(-202.370787, -66.513721) translate(163.870787, 11.513721)" fill="#032535" stroke="#032535">
+                    <polygon id="Path-3" points="76.4212684 78.780267 0.863336152 41.2234582 0.415649144 69.7135512 76.4212684 109.860368"></polygon>
+                    <polygon id="Path-2" points="76.0583131 31.121835 76.0583131 0.547383786 0.863336152 40.7934763 0.415649144 69.7135512 5.4434862 72.3035597"></polygon>
+                </g>
+                <g id="Group-dash" stroke-linejoin="bevel" transform="translate(79.747305, 0.000000)" fill="#032535" stroke="#FFFFFF">
+                    <polygon id="Path-6" points="80.4175705 11.0066928 74.3742175 0 44.4403128 0 51.6686453 11.22337"></polygon>
+                    <polygon id="Path-7" points="44.4403128 0.607876334 0.127308358 120.867061 8.46305498 131.227095 51.6686453 11.22337"></polygon>
+                    <polygon id="Path-8" points="80.4175705 11.0066928 51.6686453 11.0066928 8.46305498 131.227095 37.2507629 131.227095"></polygon>
+                </g>
+                <g id="flesh" transform="translate(255.984013, 0.000000)">
+                    <polygon id="Path-6" stroke="#C8D3E0" fill="#C8D3E0" points="9.20155847e-14 0 31.0801015 0 69.0668922 65.6135476 31.0801015 131.227095 9.20155847e-14 131.227095 37.9867907 65.6135476"></polygon>
+                    <polygon id="Path-6-Copy" stroke="#F5BE58" fill="#F5BE58" points="34.5334461 0 65.6135476 0 103.600338 65.6135476 65.6135476 131.227095 34.5334461 131.227095 72.5202368 65.6135476"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

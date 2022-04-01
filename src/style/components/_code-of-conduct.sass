@@ -1,0 +1,70 @@
+$coc-color-text: #999
+
+.CoC
+  +sans-serif
+  +font-text
+  padding-top: 80px
+
+.CoC-title,
+.CoC-subtitle,
+.CoC-staff
+  text-align: center
+  max-width: 420px
+  margin: auto
+
+.CoC-title
+  +sans-serif
+  +font-title
+  text-transform: uppercase
+  margin-top: $space-base
+  margin-bottom: $space-small
+
+.CoC-subtitle
+  +serif
+  color: $coc-color-text
+
+.CoC-columns
+  display: flex
+  justify-content: center
+  margin: 100px $space-base
+
+.CoC-column
+  flex: 1
+  padding: $space-small
+  max-width: 450px
+
+.CoC-participants
+  color: $color-blue
+  margin-right: $space-small
+  h1
+    color: $color-blue
+  p
+    color: $coc-color-text
+
+.CoC-sponsors
+  background-color: $color-blue
+  color: $color-white
+
+.CoC-staff
+  h1
+    +font-title
+    padding-bottom: $space-small
+  p
+    +serif
+    color: $coc-color-text
+    padding-bottom: $space-small
+
+.CoC-footer
+  display: flex
+  justify-content: center
+  margin: $space-base auto 100px
+
+.CoC-contact
+  max-width: 400px
+  &:not(:last-child)
+    margin-right: $space-base * 2
+
+.CoC-label
+  font-weight: bold
+  text-transform: uppercase
+  padding-bottom: $space-small

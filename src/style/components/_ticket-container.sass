@@ -1,0 +1,20 @@
+$column-container-column-width: 300px
+
+.TicketContainer
+  display: flex
+  flex-direction: row
+  justify-content: center
+  flex-wrap: wrap
+
+.TicketContainer-Column
+  width: $column-container-column-width
+  display: flex
+  align-items: center
+  flex-direction: column
+  justify-content: space-between
+  margin-left: $space-small/2
+  margin-right: $space-small/2
+
+  &.TicketContainer-ColumnHideXs
+    +media-xs-only
+      display: none

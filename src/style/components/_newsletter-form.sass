@@ -1,0 +1,26 @@
+$newsletter-form-input-spacing: $space-base
+
+.NewsletterForm
+  display: flex
+  justify-content: center
+  +media-xs-only
+    display: block
+
+.NewsletterForm-input
+  flex-grow: 1
+  align-items: flex-end
+  +media-xs-only
+    margin-bottom: $newsletter-form-input-spacing * 0.5
+    .InputHoshi,
+    .InputHoshi-field,
+    .InputHoshi-label
+      padding: 0
+      width: 100%
+
+.NewsletterForm-submit
+  max-width: 200px
+  padding-bottom: 4px
+  display: flex
+  justify-content: flex-end
+  +media-xs-only
+    max-width: none

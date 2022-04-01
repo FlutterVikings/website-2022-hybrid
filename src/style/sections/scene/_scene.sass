@@ -1,0 +1,73 @@
+$scene-skyline-width: 1000%
+$scene-skyline-height: 100%
+$scene-cloud-width: 2400px
+$scene-cloud-height: 60%
+$scene-skyline-time: 80s
+
+.Scene
+  +scene-layer
+  position: relative
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+.Scene-cloudsWrapper,
+.Scene-fullSize
+  position: absolute
+  overflow: hidden
+  background-position: 0 top
+  background-size: contain
+  +transform(translate3d(0px, 0px, 0px))
+  overflow: visible
+
+.Scene-stars
+  width: 100%
+  height: $scene-cloud-height
+
+.Scene-cloudsWrapper
+  width: 100%
+  // margin: 0 -100%
+  height: $scene-cloud-height
+  background-repeat: repeat
+  +media-portrait
+    height: 32%
+    bottom: 0
+  +media-landscape
+    height: 60%
+    top: 0
+
+.Scene-fullSize
+  width: 100%
+  height: 100vh
+  bottom: 0
+  background-size: 100%
+  background-repeat: no-repeat
+
+.Scene-clouds,
+  width: 1000%
+  background-position: top left
+  background-size: 10%
+  background-repeat: repeat
+
+.Scene-sun
+  width: 20%
+  height: 100vh
+  +media-landscape
+    background-position: top center
+  +media-portrait
+    background-position: bottom 30% center
+
+.Scene-stars
+  height: 100vh
+  +media-landscape
+    background-position: top center
+  +media-portrait
+    background-position: bottom 28% center
+
+.Scene-mountains
+  background-position: bottom center
+  +media-lg
+    background-position: bottom 80% center
+
+.Scene-town
+  background-position: bottom

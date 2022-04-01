@@ -1,0 +1,96 @@
+$ticket-name-margin: 15px
+$ticket-price-margin: 10px
+
+$ticket-separator-height: 2px
+
+$ticket-border-radius: 6px
+$ticket-border-radius-top: 6px 6px 0 0
+$ticket-border-radius-bottom: 0 0 6px 6px
+
+$ticket-discount-padding: 4px
+$ticket-discount-border: 1px solid #ccc
+
+.Ticket
+  width: 100%
+  margin-bottom: $space-small
+
+.Ticket-header
+  background: $color-green
+  border-radius: $ticket-border-radius-top
+  padding: $space-small
+  text-align: center
+
+.Ticket-separator
+  height: $ticket-separator-height
+  background: $color-blue
+
+.Ticket-name
+  +font-title
+  margin-bottom: $ticket-name-margin
+
+.Ticket-price
+  +font-largeTitle
+  margin-bottom: $ticket-price-margin
+  font-weight: bold
+
+.Ticket-price
+  +serif
+  color: $color-blue
+  font-weight: bold
+
+.Ticket-endDate
+  +sans-serif
+  text-transform: uppercase
+  font-size: $theme-font-small
+  font-style: italic
+
+.Ticket-state
+  +font-text
+  +sans-serif
+  margin-top: $space-base
+  color: $color-yellow
+  text-transform: uppercase
+  font-weight: bold
+
+.Ticket-body
+  background: $color-white
+  border-radius: $ticket-border-radius-bottom
+  padding: $space-small
+  color: $color-blue
+  text-align: center
+
+.Ticket-discount
+  display: flex
+  justify-content: space-between
+  font-size: $theme-font-text
+  text-transform: uppercase
+  align-items: center
+
+.Ticket-discountPrice
+  +serif
+  +font-title
+  color: $color-green
+  font-weight: bold
+
+.Ticket-discountInformation
+  padding-top: $ticket-discount-padding
+  margin-bottom: $space-small
+  border-top: $ticket-discount-border
+  text-align: left
+  text-transform: uppercase
+  font-size: $theme-font-small
+  font-style: italic
+
+.Ticket-button
+  margin-top: $space-small
+
+.Ticket--inactive
+  margin-bottom: $space-small
+
+  .Ticket-header
+    border-radius: $ticket-border-radius
+    background-color: $color-transparent-white
+
+.Ticket--closed
+  .Ticket-state
+    color: $color-red

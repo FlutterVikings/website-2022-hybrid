@@ -1,0 +1,25 @@
+.SectionTitle
+  display: block
+  padding: $space-base
+  padding-top: $space-base * 2
+  +font-title
+  +sans-serif
+  text-transform: uppercase
+  text-align: center
+  letter-spacing: 2px
+  +media-xs-only
+    padding-bottom: 0
+
+.SectionTitle--noPadding
+  padding-bottom: 0
+
+.SectionTitle.SectionTitle--serif
+  +serif
+  text-transform: none
+  letter-spacing: 1px
+
+.SectionTitle.SectionTitle--white
+  color: $color-white
+
+.SectionTitle.SectionTitle--with-description
+  padding-bottom: $space-small

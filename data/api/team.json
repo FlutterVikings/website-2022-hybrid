@@ -1,0 +1,38 @@
+[
+  {
+    "id": "majid_hajian",
+    "name": "Majid Hajian",
+    "title": "Software developer",
+    "company": "Softiware",
+    "social": {
+      "twitter": "https://twitter.com/mhadaily",
+      "github": "https://github.com/mhadaily",
+      "linkedin": "https://www.linkedin.com/in/mhadaily/"
+    },
+    "bio": "Majid is a passionate software developer with years of developing and architecting complex web and mobile applications. His passions are generally Flutter, PWA, and performance. He is an award-winning book author of the 'Progressive web app with Angular' book by Apress and instructor at PacktPub/Udemy and Pluralsight. He loves sharing his knowledge with the community by writing and speaking, having workshops and video tutorials, contributing to open source, and organizing meetups and events. He is also the organizer of several big Nordic conferences and meetups such as FlutterVikings!"
+  },
+  {
+    "id": "sarah_fullmer",
+    "name": "Sarah Fullmer",
+    "title": "Software developer",
+    "company": "Telia Norway",
+    "social": {
+      "twitter": "https://twitter.com/FullmerS",
+      "github": "https://github.com/fullmers",
+      "linkedin": "https://www.linkedin.com/in/fullmersarah/"
+    },
+    "bio": "Sarah 2.1 is a mobile developer at Telia Norway. She has the great fortune to work there as a full-time Flutter developer. She is also a Flutterista and GDG Oslo organizer. Previous versions of Sarah include teacher, aerospace engineer, tester and Android developer."
+  },
+  {
+    "id": "sumith_damodaran",
+    "name": "Sumith Damodaran",
+    "title": "Organizer",
+    "company": "Sitecore",
+    "social": {
+      "twitter": "https://twitter.com/sumithpdd",
+      "github": "https://github.com/sumithpdd",
+      "linkedin": "https://www.linkedin.com/in/sumith-damodaran/"
+    },
+    "bio": "Entrepreneur, Founder of mobile agency ,Product manager and mobile development enthusiasts Working as product manager, 20 years in the industry, Ranging from architect to CTO. Owned a few startup and mobile agencies. Very active in the community, have given talks on various technology stack and Organiser of GDG Copenhagen."
+  }
+]

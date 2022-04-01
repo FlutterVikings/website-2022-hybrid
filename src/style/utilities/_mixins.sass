@@ -1,0 +1,56 @@
+/** Font Family */
+@mixin sans-serif
+  font-family: $theme-font-family-sans-serif
+
+@mixin serif
+  font-family: $theme-font-family-serif
+/** Font Size */
+@mixin font-text
+  font-size: $theme-font-text
+@mixin font-title
+  font-size: $theme-font-title
+@mixin font-largeTitle
+  font-size: $theme-font-largeTitle
+
+@mixin font-responsive-largeTitle
+  +media-xs
+    +font-title
+  +media-sm
+    +font-largeTitle
+
+@mixin font-responsive-title
+  +media-xs
+    +font-text
+  +media-sm
+    +font-title
+
+/** Transitions */
+@mixin keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+@mixin animation($args)
+  -webkit-animation: $args
+  animation: $args
+
+@mixin transform($args)
+  -webkit-transform: $args
+  transform: $args
+
+@mixin transition($args)
+  -webkit-transition: $args
+  transition: $args
+
+@mixin user-select($arg)
+  -webkit-user-select: $arg
+  -khtml-user-select: $arg
+  -moz-user-select: $arg
+  -ms-user-select: $arg
+  user-select: $arg
+
+@mixin accessibly-hidden
+  position: absolute
+  top: -9999px
+  left: -9999px

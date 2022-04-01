@@ -1,0 +1,33 @@
+$SpeakerEntry-anchor-offset: -100px
+
+.SpeakerEntry
+  position: relative
+  width: 800px
+  display: flex
+  flex-wrap: wrap
+  flex-direction: row
+  align-items: flex-start
+  justify-content: space-between
+  +media-xs-only
+    width: 100%
+
+.SpeakerEntry-anchor
+  position: absolute
+  top: $SpeakerEntry-anchor-offset
+
+.SpeakerEntry-basics
+  max-width: 160px
+  text-align: center
+  +media-xs-only
+    margin: 0 auto
+
+.SpeakerEntry-info
+  max-width: 470px
+  text-align: left
+  padding: 0 $space-small
+  margin: auto
+
+.SpeakerEntry-anchor
+  display: block
+  position: relative
+  visibility: hidden

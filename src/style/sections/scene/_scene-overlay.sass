@@ -1,0 +1,62 @@
+.SceneOverlay
+  +sceneOverlay-layer
+  max-width: 650px
+  padding: 5em 2em
+  text-align: center
+
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  height: 100vh
+  margin: auto
+  left: 0
+  right: 0
+  bottom: 0
+
+  > *
+    +sceneOverlay-layer
+    flex-shrink: 0
+
+.SceneOverlay-logo
+  +media-xs
+    max-width: 100px
+  +media-sm
+    max-width: 150px
+
+.SceneOverlay-slogan
+  +font-responsive-largeTitle
+  +media-xs
+    max-width: 320px
+    margin-top: $space-small
+  +media-sm
+    max-width: 100%
+    margin-top: $space-base
+
+.SceneOverlay-info
+  +font-responsive-title
+
+  +media-xs
+    margin: $space-small
+  +media-sm
+    margin: $space-base
+
+.SceneOverlay-date
+  font-weight: bold
+  text-transform: uppercase
+
+.night
+  .SceneOverlay
+    color: $color-white
+
+.Scene--footer
+  .SceneOverlay
+    height: 100%
+
+.SceneOverlay-smallLogo
+  max-width: 100px
+
+.SceneOverlay-footerTitle,
+.SceneOverlay-footerSubtitle
+  +font-text
+  text-transform: uppercase

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "evgeny_kot",
+    "name": "Evgeny Kot",
+    "title": "Dart/Flutter/Web GDE",
+    "company": "Wrike",
+    "social": {
+      "twitter": "https://twitter.com/bunopus",
+      "github": "",
+      "linkedin": ""
+    },
+    "bio": "Frontend developer for many years, speaker. Co-organizer of HolyJS conference. Dart/Flutter/Web GDE. Evgeny has come a long way from C++ and low-level programming to JavaScript and Web. Jumped on the Dart train before Flutter even showed up."
+  },
+  {
+    "id": "sarah_fullmer_mc",
+    "name": "Sarah Fullmer",
+    "title": "Software developer",
+    "company": "Telia Norway",
+    "social": {
+      "twitter": "https://twitter.com/FullmerS",
+      "github": "https://github.com/fullmers",
+      "linkedin": "https://www.linkedin.com/in/fullmersarah/"
+    },
+    "bio": "Sarah 2.1 is a mobile developer at Telia Norway. She has the great fortune to work there as a full-time Flutter developer. She is also a Flutterista and GDG Oslo organizer. Previous versions of Sarah include teacher, aerospace engineer, tester and Android developer."
+  },
+  {
+    "id": "majid_hajian_mc",
+    "name": "Majid Hajian",
+    "title": "FlutterVikings Orginizer / GDE",
+    "company": "Softiware",
+    "social": {
+      "twitter": "https://twitter.com/mhadaily",
+      "github": "https://github.com/mhadaily",
+      "linkedin": "https://www.linkedin.com/in/mhadaily/"
+    },
+    "bio": "Majid is a passionate software developer with years of developing and architecting complex web and mobile applications. His passions are generally Flutter, PWA, and performance. He is an award-winning book author of the 'Progressive web app with Angular' book by Apress and instructor at PacktPub/Udemy and Pluralsight. He loves sharing his knowledge with the community by writing and speaking, having workshops and video tutorials, contributing to open source, and organizing meetups and events. He is also the organizer of several big Nordic conferences and meetups such as FlutterVikings!"
+  },
+  {
+    "id": "muhammed_salih_guler_mc",
+    "name": "Muhammed Salih Guler",
+    "title": "GDE",
+    "company": "Superlist",
+    "social": {
+      "twitter": "https://twitter.com/salihgueler",
+      "github": "",
+      "linkedin": ""
+    },
+    "bio": ""
+  }
+]

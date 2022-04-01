@@ -1,0 +1,700 @@
+[
+  {
+    "id": "tim_sneath",
+    "name": "Tim Sneath",
+    "title": "Flutter leads product management",
+    "company": "Google",
+    "social": {
+      "twitter": "https://twitter.com/timsneath",
+      "github": "https://github.com/timsneath",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Flutter, FFI and Fun: Windows Development with Dart and Win32",
+      "description": "This talk shows how Dart’s FFI feature lets you break out of the limitations that most cross-platform frameworks impose. We’ll walk together through different ways a Dart or Flutter app can access the Windows API to do wild things, some of which make for beautiful, seamless Windows experiences, and others that you should never do! For the committee: Specifically, I plan to cover the following: Very quick overview of FFI as a means to talk to C libraries from Dart code Show an example of using FFI to build a full-screen console text editor in 5K that runs on Windows, macOS and Linux Gradually move up the chain, building on these primitives to show MessageBox, a color picker, and a full Win32 window, and finally Notepad built in Dart Talk about package:win32, a plugin I’ve built in my spare time to do all the heavy lifting for developers Talk about Microsoft’s win32metadata and how that lets us auto-generate the full Win32 API, including COM interfaces Show a couple of examples of advanced usage: other plugins that depend on win32, custom window styles, support for Windows 11’s “Mica” acrylic materials I plan to have no more than 2-3 slides; most of the talk will be demos.",
+      "lightening": false
+    },
+    "bio": "Tim Sneath (@timsneath) leads product management for Flutter and Dart. He joined Google in 2017 after seventeen years leading client platform and developer teams at Microsoft. In his spare time, he tinkers with various retro computing projects, battles with the New York Times crossword, and attempts to persuade his mother that computers aren’t out to get her."
+  },
+  {
+    "id": "remi_rousselet",
+    "name": "Remi Rousselet",
+    "title": "Provider author",
+    "company": "Invertase",
+    "social": {
+      "twitter": "https://twitter.com/remi_rousselet",
+      "github": "https://github.com/rrousselGit",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Riverpod!",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Rémi is an active member of the Flutter community since its early days. He is the author of various popular packages such as Provider/Riverpod, flutter_hooks or Freezed. At Invertase, he is working on open-source projects to simplify the life of other developers."
+  },
+  {
+    "id": "felix_angelov",
+    "name": "Felix Angelov",
+    "title": "Software engineer",
+    "company": "very good ventures",
+    "social": {
+      "twitter": "https://twitter.com/felangelov",
+      "github": "https://github.com/felangel",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Managing State with Bloc v8",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Felix Angelov is a Principal Engineer at Very Good Ventures. He previously worked at BMW where he pioneered the transition to Flutter. In addition to working with clients, he is also a dedicated open source creator and maintainer. Felix created the bloc library, which is one of the most popular state management libraries and has been named a Flutter Favorite by Google."
+  },
+
+  {
+    "id": "simon_lightfoot",
+    "name": "Simon Lightfoot",
+    "title": "FlutterWhisperer",
+    "company": "FlutterLondon",
+    "social": {
+      "twitter": "https://twitter.com/devangelslondon",
+      "github": "",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Something awesome to be announced",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Simon loves Flutter and believes its the future of Mobile development. Co-founder Flutter Study Group on Slack, HumpdayQandA and Flutter Community Lead. He's been writing code for 18+ years, of which the last 10 years has been professional Android development. He discovered Flutter in Oct 2017 and since then has not looked back."
+  },
+  {
+    "id": "pooja_bhaumik",
+    "name": "Pooja Bhaumik",
+    "title": "GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/pblead26",
+      "github": "https://github.com/PoojaB26",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Diagnostic Tests for Flutter Apps: Debugging Techniques",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Pooja Bhaumik is a technical mentor at Startup Clinic initiative by Google For Startups, a Google Developer Expert for Flutter, former Senior Engineer at Bounce & CreatorStack and contributing author to Increment by Stripe. When she is not writing code, she either enjoys mentoring folks to help them grow in their development careers or contributes to the tech community through blog posts, public speaking, Youtube videos, and open source contributions. She is also passionate about diversity & inclusion and has co-founded WomenDroid to support personal & professional growth objectives for women developers."
+  },
+  {
+    "id": "andrei_diaconu",
+    "name": "Andrei Diaconu",
+    "title": "Software Engineer",
+    "company": "Microsoft",
+    "social": {
+      "twitter": "https://twitter.com/andreidiaconu",
+      "github": "https://github.com/andreidiaconu",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Does your layout fold?",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Passionate about mobile and with a lot of experience on both Android and Flutter, Andrei is here to help you navigate the foldable world. He is part of the Microsoft Surface Duo team and is making sure you have a great time developing for it using Flutter."
+  },
+  {
+    "id": "danielle_cox",
+    "name": "Danielle Cox",
+    "title": "Software Engineer",
+    "company": "flutterista",
+    "social": {
+      "twitter": "https://twitter.com/imafiguresk8r",
+      "github": "",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Finished you app?  Is it accessible? ",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Danielle is the coorganizer of the Flutteristas and host of the recently successful Flutter Apprentice Book Club as well as a professional Flutter developer.  Since proudly graduating from the University of Oklahoma, she has worked for many large companies as well as multiple startups programming in C, SQL and most recently PHP."
+  },
+  {
+    "id": "kamal_shree",
+    "name": "kamal shree S",
+    "title": "GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/whatsupcoders",
+      "github": "https://github.com/whatsupcoders",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Common mistakes to avoid while developing a Flutter App",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Google Developer Expert in Flutter & Dart with 12 years of experience in Web Technologies, Android, and Flutter. I have worked for multinational firms in India, the Netherlands and USA. I am a Youtuber (whatsupcoders), Mentor @MentorCruise and Open-Source Community Builder."
+  },
+  {
+    "id": "dominik_roszkowski",
+    "name": "Dominik Roszkowski",
+    "title": "GDE / Principle Engineer",
+    "company": "VGV",
+    "social": {
+      "twitter": "https://twitter.com/OrestesGaolin",
+      "github": "http://github.com/orestesgaolin",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Improve your animations skills in Flutter",
+      "description": "One of the main selling points of Flutter is its ability to quickly build stunning user interfaces and animations. In this talk you’ll learn how to improve building complex animations, micro-interactions and navigation transitions. I will show you techniques that help me debug and execute them without wasting a lot of time. We'll look into some performance optimization techniques as well.",
+      "lightening": false
+    },
+    "bio": "Dominik is Google Developer Expert in Flutter eager to create beautiful apps for mobile and desktop. He’s Principal Developer at Very Good Ventures and co-founder of Flutter Europe conference. He is active speaker on local meetups and writes Flutter-related articles on his blog roszkowski.dev. He’s been working as a deputy manager of PW-Sat2 student satellite project."
+  },
+  {
+    "id": "muhammed_salih_guler",
+    "name": "Muhammed Salih Guler",
+    "title": "Senior Mobile Engineer",
+    "company": "Superlist",
+    "social": {
+      "twitter": "https://twitter.com/salihgueler",
+      "github": "https://github.com/salihgueler",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Something awesome to be announced",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Salih is a Berlin based Android Engineer who is a Google Developer Expert for Flutter and Dart. He likes sharing his knowledge with the people by mentoring aspiring developers, blogging and talking at conferences."
+  },
+  {
+    "id": "matej_knopp",
+    "name": "Matej Knopp",
+    "title": "Senior Engineer",
+    "company": "Superlist",
+    "social": {
+      "twitter": "https://mobile.twitter.com/matejknopp",
+      "github": "",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "NativeShell",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "I’ve been fascinated with desktop applications ever since I first saw Turbo Vision. I went through many different toolkits, but eventually came to a conclusion that there’s nothing quite like Flutter. I contribute to Flutter Engine, work on NativeShell and think that Rust and Flutter is a beautiful combination."
+  },
+  {
+    "id": "chris_swan",
+    "name": "Chris Swan",
+    "title": "Senior Engineer",
+    "company": "The @ Company",
+    "social": {
+      "twitter": "https://twitter.com/cpswan",
+      "github": "",
+      "linkedin": "https://www.linkedin.com/in/chrisswan/"
+    },
+    "talk": {
+      "title": "Full Stack Dart",
+      "description": "Flutter provides an excellent way to build Android, iOS, web and desktop apps, but what about the back end services? Full stack Dart is all about using that investment in Dart programming to build the services used by applications, whether it's in the cloud or on the Internet of Things. This presentation will look at the tradeoffs between just in time (JIT) and ahead of time (AOT) compilation, Dart on Docker, the Functions Framework for Dart, Profiling and Performance Management. Choices of back end architecture (x86_64 vs Arm) will also be examined, along with some of the challenges this can present for Continuous Delivery.",
+      "lightening": false
+    },
+    "bio": "I’ve been fascinated with desktop applications ever since I first saw Turbo Vision. I went through many different toolkits, but eventually came to a conclusion that there’s nothing quite like Flutter. I contribute to Flutter Engine, work on NativeShell and think that Rust and Flutter is a beautiful combination."
+  },
+  {
+    "id": "goncalo_palma",
+    "name": "Gonçalo Palma",
+    "title": "GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/GonPalma",
+      "github": "https://github.com/vanethos",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Supercharging your Flutter Web Apps with Web Assembly",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "I’m a GDE for Flutter and Dart and the Lead Developer of Pvotal, a Tech company where we explore how we can use Flutter Web to solve the Equine industry’s main problems with bleeding-edge technology. Flutter has not only proved to be a fun and challenging tool, being the main technology that I used in two different startups, but it also brought me to new passions, such as Open Source - with package creation, and contributing to open-source apps, communities - with Flutter Portugal, and education - with sharing what I’ve learned so far via articles and talks. My mantra is to explore and find via rubber-ducking: many times we don’t have the answers in articles (although WE may be the ones writing them), so we must be comfortable with diving into the unknown, testing, failing, and rambling about it with your team or friends."
+  },
+  {
+    "id": "sakina_abbas",
+    "name": "Sakina Abbas",
+    "title": "GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/sakin8tor",
+      "github": "https://github.com/sakina-abbas",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Working with Background Services in Flutter",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Co-founder and CEO of Reactree and the first female Google Developer Expert for Flutter and Dart in Pakistan, Sakina Abbas is all about solving problems through technology. She started off as a native Android developer and is now leading Flutter development and DevOps at ReacTree. To date, she has provided consultancies to numerous international and local clients and has built a number of custom solutions. She's an avid gamer, and much of her personal work is inspired by games."
+  },
+  {
+    "id": "vilson_blanco_dauinheimer",
+    "name": "Vilson Blanco Dauinheimer",
+    "title": "GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/BwolfDev",
+      "github": "https://github.com/bwolfs2",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Micro-Apps || Micro Front-Ends",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Technology enthusiast, computer lover and for the possibility of turning ideas into reality. Being able to create, take something out of my mind and make it real is fascinating to me, especially in the mobile world using Flutter! Co-Founder and Organizer of Flutterando the Biggest Flutter Community of Brazil Google For Startups Mentor Flutter Specialist at F-Team"
+  },
+  {
+    "id": "mais_alheraki",
+    "name": "Mais Alheraki",
+    "title": "GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/pr_Mais",
+      "github": "https://github.com/pr-mais",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "FlutterFire support for Desktop and Dart",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Software engineer and Flutter GDE."
+  },
+  {
+    "id": "aleksandr_denisov",
+    "name": "Aleksandr Denisov",
+    "title": "GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/shuregdenisov",
+      "github": "https://github.com/DenisovAV",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Flutter for TV platforms",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Aleksander is experienced a lot in enterprise development, in IT for more than 15 years. He worked in many different domains with many different technologies, but currently, his main interest is multi-platform development using Flutter. Aleksandr, Chief Software Engineer, Co-Head of Flutter Competency at EPAM Systems, Flutter and Dart GDE (Google Developer Expert), organizer of GDG Moscow community, host of podcasts Mobile People Talks and Flutter Dev Podcast."
+  },
+  {
+    "id": "thomas_burkhart",
+    "name": "Thomas Burkhart",
+    "title": "GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/thomasburkhartb",
+      "github": "https://github.com/escamoteur",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "3D Graphics with Flutter and OpenGL",
+      "description": "TBA",
+      "lightening": true
+    },
+    "bio": "Born 1971 Thomas Burkhart could be seen almost as a legacy system. Being almost 30 years in this industry led him to a lot of different technologies, like C++ with mfc, C#, microcontrollers in C and currently mobile App development with Flutter and Dart.  What only view people know that he was also a professional magician and bakes his own bread."
+  },
+  {
+    "id": "waleed_arshad",
+    "name": "Waleed Arshad",
+    "title": "GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/wal_33d",
+      "github": "https://github.com/wal33d006",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Spice up your Flutter apps with Shortcuts & Actions",
+      "description": "Since a lot of developers are moving their Flutter applications to support the Web and Desktop, I propose something that will help them increase the user experience of their applications. This talk majorly focuses on adding shortcuts and actions to Flutter applications using Intents, without having to add any third party plugins/packages in the code. For example, a Flutter desktop app, or a Flutter web app has a writing/editing feature along with the ability to save things. In this case ideally the common gesture to achieve this is Ctrl+S for “save”, Ctrl+A for “select all”,  Ctrl+C for “copy”, and so on. With Intents and Actions widget in Flutter, it is all possible with simplicity and minimum amount of code. This session will have most of its part as live coding stuff.",
+      "lightening": false
+    },
+    "bio": "Waleed Arshad is a core mobile technologist, an author, and a passionate cross-platform developer. He has recently authored a book named “Manage State in Flutter Pragmatically”. He is also the first person from Pakistan to become a Google Developer Expert in Flutter. After graduating from FAST Karachi, he has been working in the industry for more than five years and is currently working in the Developer Experience team for Flutter at Tendermint Inc.. He is also leading Pakistan’s Flutter community."
+  },
+  {
+    "id": "aloos_deniel",
+    "name": "Aloïs Deniel",
+    "title": "GDE",
+    "company": "Freelance",
+    "social": {
+      "twitter": "https://twitter.com/aloisdeniel",
+      "github": "https://github.com/aloisdeniel/",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Custom design systems: from design to widgets",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "I'm a french Flutter freelance developer from France. I love contributing to the Flutter community by participating to open source projects and creating content. I'm also a Google Developer Expert."
+  },
+  {
+    "id": "morgan_hunt",
+    "name": "Morgan Hunt",
+    "title": "Flutter developer",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/mrgnhnt96_dev",
+      "github": "https://github.com/mrgnhnt96",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Create your own Code-Generating Package",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Morgan is a die-hard Flutter developer 💙. He has been developing in Flutter non-stop since Flutter 1.12 was released! Morgan has been developing many dart & flutter packages, and contributing to as many open-source projects as he can. He currently works full-time at Clean Simple Eats with a bit of freelance on the side because he can't control how much he loves to code."
+  },
+  {
+    "id": "minas_giannekas",
+    "name": "Minas Giannekas",
+    "title": "Flutter developer",
+    "company": "Self-employed",
+    "social": {
+      "twitter": "https://twitter.com/whiplashoo",
+      "github": "https://github.com/whiplashoo",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Using Flutter to build a native-looking desktop app for macOS and Windows",
+      "description": "It is indeed possible to achieve an adaptive and native-looking UI for desktop platforms with Flutter. In my talk, I will be presenting the methods and tools I used to build and ship a Flutter desktop app for macOS and Windows, with a UI that matches closely each platform's design standards (components like buttons or icons, typography, animations, title bars, etc.). ",
+      "lightening": true
+    },
+    "bio": "I am a self-employed app developer. My main background is web development, but I have been using Flutter for the past year or so and have published apps for all platforms, mobile and desktop. I also contribute to open-source and am an author of a couple of Flutter packages. "
+  },
+  {
+    "id": "pascal_welsch",
+    "name": "Pascal Welsch",
+    "title": "GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/passsy",
+      "github": "https://github.com/passsy",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "The unpaid backbone of our apps: Package maintainers",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Pascal is one of the first GDEs for Flutter and Dart and maintainer of multiple open-source libraries. He's running phntm, a Flutter agency in Germany and builds Flutters best user feedback tool wiredash.io"
+  },
+  {
+    "id": "abhishek_yatinkumar_doshi",
+    "name": "Abhishek Yatinkumar",
+    "title": "GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/AbhishekDoshi26",
+      "github": "https://github.com/AbhishekDoshi26",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Nature or Flutter? Who has the best trees?",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Hey Everyone! **I am a Google Developer Expert for Dart and Flutter! I am also one of the Google Mentors. 💙** I currently work as a Software Engineer (Flutter Developer) at Bacancy Technology. I am also the Organizer of Flutter Valsad and Co-Organizer of Flutter India. During the daytime, I manage different projects, take interviews for the Flutter Developer position, and help the team with issues. After work, I write articles for the community and help people leverage their careers in Flutter. Reachout to me at: https://www.linkedin.com/in/abhishekdoshi26 https://twitter.com/AbhishekDoshi26 https://www.instagram.com/abhishekdoshi26 https://github.com/AbhishekDoshi26 Read my articles at: https://abhishekdoshi26.medium.com/"
+  },
+  {
+    "id": "cagatay_ulusoy",
+    "name": "Cagatay Ulusoy",
+    "title": "Flutter Developer",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/ulusoyapps",
+      "github": "https://github.com/ulusoyca",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "From Motion Design Specs To Flutter Code",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Cagatay is a Software Engineer specialized in Android and Flutter application development. He is currently working as a software engineer at Wolt, in the retail team. He is passionate about blogging and vlogging his ultra trail races, sharing knowledge in the Flutter community with sample apps and articles."
+  },
+  {
+    "id": "alicja_ogonowska",
+    "name": "Alicja Ogonowska",
+    "title": "Flutter Developer",
+    "company": "EQUIQO",
+    "social": {
+      "twitter": "https://twitter.com/AlicjaOgonowska",
+      "github": "",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Let's test the full widget tree!",
+      "description": "<p>Everybody knows unit tests, widget tests and integration tests, but have you ever thought about testing full widget tree? Instead of writing widget tests that exercise just one widget in separation, we will set up the whole path user would have to follow to encounter this widget.</p><p>During the talk you will find out:</p><ul> <li>when to use full widget tree tests and when ‘normal’ widget tests are just fine</li> <li>what can you test with it</li> <li>advantages over using typical widget tests or integration tests</li> <li>setup that is needed to get you going</li> <li>common problems that can be encountered</li></ul>",
+      "lightening": false
+    },
+    "bio": "I am a mobile app developer with 6 years of experience. I started as an Android developer and then moved to Flutter over two years ago, never regretting the change! If I don't code, I probably cook or eat."
+  },
+  {
+    "id": "jeroen_meijer",
+    "name": "Jeroen Meijer",
+    "title": "GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/jfkdev",
+      "github": "https://github.com/jeroen-meijer",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Something awesome to be announced",
+      "description": "TBA",
+      "lightening": true
+    },
+    "bio": "Jay is a Dutch full-stack app developer, administrator and moderator for the Flutter Community organization, passionate about Flutter and TypeScript and helping people out wherever possible."
+  },
+  {
+    "id": "scott_stoll",
+    "name": "Scott Stoll",
+    "title": "Community Lead",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/scottstoll2017",
+      "github": "",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Something awesome to be announced",
+      "description": "TBA",
+      "lightening": true
+    },
+    "bio": "Flutter Community Leader"
+  },
+  {
+    "id": "alessio_salvadorini",
+    "name": "Alessio Salvadorini",
+    "title": "Flutter Developer",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/ASalvadorini",
+      "github": "https://github.com/alesalv",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Flutter Architecture Components",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "I'm specializes in mobile development and design. I forge products based on simplicity, fluidity, and beauty. Like a superhero, Creative Technologist at IDT Messaging during the day, Explorer at Fluxit during the night. It all started long time ago on handhelds devices, but my passion flourished when I met Android, and exploded when I encountered Flutter. All things Fuchsia"
+  },
+  {
+    "id": "gordon_hayes",
+    "name": "Gordon Hayes",
+    "title": "Flutter Developer Advocate",
+    "company": "Stream",
+    "social": {
+      "twitter": "https://twitter.com/gordonphayes",
+      "github": "https://github.com/funwithflutter",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Tips, Tricks and Tools: Flutter Performance",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Flutter Developer Advocate at Stream. Creator of the Fun with Flutter YouTube Channel."
+  },
+  {
+    "id": "tom_gilder",
+    "name": "Tom Gilder",
+    "title": "Flutter Developer",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/tomgilder",
+      "github": "https://github.com/tomgilder",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Navigator 2.0: huh? What’s wrong with .push()?",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Tom makes awesome apps with Flutter at Codemate in Helsinki. He's been working professionally with Flutter for the past 3 years, and is the author of the popular Routemaster navigation package."
+  },
+  {
+    "id": "krzysztof_sroka",
+    "name": "Krzysztof Krasiński-Sroka",
+    "title": "GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/kpsroka",
+      "github": "https://github.com/kpsroka",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "When Flutter Goes Red",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Krzysztof is an experienced developer with passion for creating beautiful and useful user interfaces. Throughout his career he worked on a variety of products, starting from testing tools, data-crunching pipelines, web technologies, and finally mobile apps. Apart from being a developer, he is also a founder and tech lead of Widgeters, a Flutter development consultancy, and a Google Developer Expert for Dart and Flutter."
+  },
+  {
+    "id": "anna_leushchenko",
+    "name": "Anna Leushchenko",
+    "title": "GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/AnnaLeushchenko",
+      "github": "https://github.com/foxanna",
+      "linkedin": "https://www.linkedin.com/in/annaleushchenko/"
+    },
+    "talk": {
+      "title": "Trash talk: WHENs and HOWs of Dart VM’s GC",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Anna is a mobile development expert, passionate about quality software, focused on Flutter. For 7 years she has been creating cross-platform apps using Xamarin and Flutter technologies from sketches on a napkin to delivering functional and beautiful products to happy end-users. Anna is a Google Developer Expert in Dart and Flutter. First in Ukraine. She is a conference speaker and author of articles on different topics related to Flutter and Xamarin. Anna contributes to OSS. She also has an interest in mobile apps design."
+  },
+  {
+    "id": "thomas_qvidahl",
+    "name": "Thomas Qvidahl",
+    "title": "Engineer",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/qvidahl",
+      "github": "https://github.com/tplive/",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Flutter in the Fastlane",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Open source enthusiast, working to make companies do the right thing and support open source. Always using his career as an excuse to geek out with new and shiny things. Long-time love affair with Flutter."
+  },
+  {
+    "id": "oleksandr_leushchenko",
+    "name": "Oleksandr Leushchenko",
+    "title": "GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/olexale",
+      "github": "https://github.com/olexale",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "BDD in Flutter",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Oleksandr is a public speaker, lecturer, AR enthusiast, OSS contributor, mentor, and mobile developer since 2012. He is passionate about software engineering best practices, test-first approach, and automation. Throughout his career, he has build digital products for dozens of clients and helped many developers grow professionally. From 2019 Oleksandr popularizes Flutter in Ukraine; he is a founder of a local Flutter community. In his free time, he likes to play guitar, sing, and read non-fiction literature."
+  },
+  {
+    "id": "guillaume_bernos",
+    "name": "Guillaume Bernos",
+    "title": "Flutter Engineer",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/BeGuillaume",
+      "github": "https://github.com/Lyokone",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Use OpenApi generator to share your models between Flutter and your backend",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "I'm a Flutter enthusiast for personal and professional projects, and author of the Flutter Favorite's `location` library. I discovered Flutter during the alpha and have been working with it ever since."
+  },
+  {
+    "id": "kubra_selcuk",
+    "name": "Kübra Selçuk",
+    "title": "Flutter Engineer",
+    "company": "",
+    "social": {
+      "twitter": "",
+      "github": "https://github.com/KubraSelcuk",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Flutter and AR",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Junior Mobile Application Developer - GDG Organizer - WTM Ambassador"
+  },
+  {
+    "id": "jaime_blasco_andres",
+    "name": "Jaime Blasco Andrés",
+    "title": "GDE",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/JamesBlasco",
+      "github": "https://github.com/jamesblasco",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Create advanced scrollable experiences with slivers",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "Jaime is a Google Developer Expert focused on Flutter. He has created and currently maintains some useful and popular packages related to this toolkit. He is a very active member of the community and co-leads the Spaniard Flutter Community."
+  },
+  {
+    "id": "lukas_klingsbo",
+    "name": "Lukas Klingsbo",
+    "title": "Flutter Developer",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/spyd0n",
+      "github": "https://github.com/spydon/",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Game development with the Flame engine",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "I'm a member of the Blue Fire open source collective which focuses on bringing great libraries to the Flutter community, our biggest project is the Flame Game engine, the only game engine for Flutter."
+  },
+  {
+    "id": "viktor_lidholt",
+    "name": "Viktor Lidholt",
+    "title": "Flutter Developer",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/viktorlidholt",
+      "github": "https://github.com/vlidholt",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Building better backends with Dart",
+      "description": "TBA",
+      "lightening": false
+    },
+    "bio": "With a master in computer science and more than 20 years industry experience, Viktor has a solid background in software engineering. Before starting his own venture he worked at Google’s Flutter team in Silicon Valley. He has held talks and taught guest lectures on programming, app creation, and computer graphics at international conferences and universities such as MIT, Carnegie Mellon, and UC Berkeley."
+  },
+  {
+    "id": "aditya_thakur",
+    "name": "Aditya Thakur",
+    "title": "Flutter Developer",
+    "company": "",
+    "social": {
+      "twitter": "https://twitter.com/adityathakurxd",
+      "github": "https://github.com/adityathakurxd",
+      "linkedin": ""
+    },
+    "talk": {
+      "title": "Flutter Lints to rescue",
+      "description": "TBA",
+      "lightening": true
+    },
+    "bio": "I am a Developer and Designer with experience in building cross platform applications. I also have a 5000 subscriber YouTube channel where I make videos on Flutter and a 600+ community on Discord. Previously, I have been a speaker at clubs and universities across India and the Flutter Global Summit 2021."
+  }
+]

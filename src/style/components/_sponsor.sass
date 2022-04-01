@@ -1,0 +1,51 @@
+$Sponsor-width: 260px
+$Sponsor-height: 40px
+$Sponsor-spacing: 10px
+$Sponsor-font-small: 10px
+
+.Sponsor
+  width: $Sponsor-width
+  height: $Sponsor-height
+
+  border-radius: $space-small
+  margin: $Sponsor-spacing 0 0 $space-small
+  background: $color-grey
+
+  display: flex
+  justify-content: center
+  align-items: center
+
+  font-weight: bold
+  color: $color-white
+  text-transform: uppercase
+
+  +media-xs-only
+    width: $Sponsor-width * 0.6
+    height: $Sponsor-height * 0.6
+
+    font-size: $Sponsor-font-small
+
+.Sponsor-name
+  color: $color-white
+
+.Sponsor-label
+  +serif
+
+  margin-right: $Sponsor-spacing
+
+  font-size: $theme-font-base
+  font-style: italic
+  font-weight: normal
+  text-transform: capitalize
+
+  +media-xs-only
+    font-size: $Sponsor-font-small
+
+.Sponsor-cta
+  color: $color-white
+
+.Sponsor.Sponsor--lunch
+  background: $color-green
+
+.Sponsor.Sponsor--part
+  background: $color-twitter-blue

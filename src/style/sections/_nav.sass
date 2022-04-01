@@ -1,0 +1,101 @@
+$nav-bar-size: 60px
+
+.Nav
+  +nav-layer
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  pointer-events: none
+  color: $color-green
+
+.Nav--away
+  .Nav-overlay
+    +transform(translate3d(9999px, 9999px, 0))
+
+.Nav--scrolled,
+.Nav--alwaysOpaque,
+.Nav--open
+  color: $color-white
+
+.Nav-bar
+  +navBtn-layer
+  +transition(all 0.3s)
+  position: fixed
+  width: 100%
+  height: $nav-bar-size
+  display: flex
+  flex-direction: row-reverse
+  justify-content: space-between
+  pointer-events: all
+
+.Nav--scrolled:not(.Nav--open),
+.Nav--alwaysOpaque:not(.Nav--open)
+  .Nav-bar
+    box-shadow: 0 4px 0 rgba(32, 32, 32, 0.2)
+    opacity: 1
+
+.Nav-bar
+  .Btn
+    display: none
+
+.Nav-title
+  display: none
+
+.Nav-barLogo
+  display: none
+
+.Nav--scrolled,
+.Nav--alwaysOpaque
+  .Nav-barLogo
+    display: flex
+
++media-large-menu
+  .Nav:not(.Nav--open),
+    .Nav-bar .Btn
+      display: block
+
++media-sm
+  .Nav-title
+    display: initial
+
+.Nav--scrolled,
+.Nav--alwaysOpaque
+  .Nav-bar
+    background-color: $color-green
+
+.Nav-barMenu
+  display: flex
+
+.Nav-barMenu,
+.Nav-barLogo
+  align-items: center
+  margin: 20px
+  +font-text
+  text-transform: uppercase
+  text-decoration: none
+  color: $color-white
+  > :not(:last-child)
+    margin-right: $space-small
+
+.Nav-overlay
+  +transition(opacity 0.3s)
+  position: absolute
+  top: 0
+  display: block
+  width: 100%
+  opacity: 0
+  background-color: $color-green
+  padding-top: 80px
+  // height: calc(100% - 80px)
+  height: 100%;
+  pointer-events: none
+
+.Nav--open
+  .Nav-bar
+    opacity: 0.95
+
+  .Nav-overlay
+    pointer-events: all
+    opacity: 0.95

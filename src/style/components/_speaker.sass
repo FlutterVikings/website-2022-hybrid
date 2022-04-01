@@ -1,0 +1,95 @@
+$speaker-picture-size: 160px
+$speaker-picture-border-size: 6px
+
+.Speaker
+  width: 400px
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-bottom: $space-base
+  text-decoration: none
+
+.Speaker-pictureWrapper
+  width: $speaker-picture-size
+  height: $speaker-picture-size
+  margin: auto
+  overflow: hidden
+  border-radius: 50%
+  border: solid $speaker-picture-border-size $color-yellow
+  background-color: $color-yellow
+
+.Speaker--mc
+  .Speaker-pictureWrapper
+    border-color: $color-green
+  .Speaker-shortDesc
+    color: $color-green
+
+.Speaker-picture
+  width: 100%
+  margin: auto
+
+.Speaker-name
+  +font-title
+  +serif
+  text-transform: uppercase
+  color: $color-blue
+  margin-top: $space-small
+
+.Speaker-name.Speaker-name--spaced
+  margin-bottom: $space-small
+
+.Speaker-firstName,
+.Speaker-lastName
+  width: 100%
+  text-align: center
+
+.Speaker-lastName
+  font-weight: normal
+
+.Speaker-lastName
+  font-weight: bold
+
+.Speaker-shortDesc
+  +font-text
+  +sans-serif
+  margin: 15px
+  text-align: center
+  color: $color-yellow
+
+.Speaker-descTitle
+  +font-text
+  +sans-serif
+
+  margin: 0 15px 15px 0
+
+  font-weight: bold
+
+  +media-xs-only
+    text-align: center
+    margin: 15px
+
+.Speaker-links
+  font-size: 26px
+  a
+    color: $color-grey
+    text-decoration: none
+    &:not(:last-child)
+      margin-right: 13px
+    &:hover
+      color: darken($color-grey, 5%)
+
+.Speaker-info-text
+  +font-text
+  +serif
+  color: $color-grey
+  margin-top: $space-small
+  margin-bottom: $space-base
+
+.Speaker-talk-title
+  +sans-serif
+  +font-title
+  color: $color-blue
+
+  padding-bottom: $space-small
+
+  border-bottom: 1px solid $color-grey

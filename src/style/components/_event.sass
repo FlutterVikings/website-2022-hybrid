@@ -1,0 +1,136 @@
+$Event-icon-size: 10px
+$Event-icon-border-size: 1px
+
+.Event
+  display: flex
+  justify-content: flex-end
+
+  +media-xs-only
+    width: 100%
+    justify-content: flex-start
+
+.Event-time
+  width: 50%
+  font-size: 1.4rem
+  padding: $Event-icon-size 0
+  margin-top: $Event-icon-size / 2 - $Event-icon-border-size * 2
+
+  text-align: right
+  color: $color-grey
+
+  &:after
+    content: ''
+    margin-right: $Event-icon-size * 2
+
+  +media-xs-only
+    width: calc(35% + 12px)
+    margin-top: 0
+    font-size: $theme-font-small
+
+.Event-details
+  +font-text
+  // Event-icon-size + border-size
+  width: calc(50% - 12px)
+
+  align-self: flex-end
+
+  padding: $Event-icon-size 0
+
+  text-transform: uppercase
+
+  border-left: $Event-icon-border-size solid $color-grey
+
+  +media-xs-only
+    width: 65%
+    font-size: $theme-font-small
+
+  &:before
+    content: ''
+
+    position: absolute
+
+    width: $Event-icon-size
+    height: $Event-icon-size
+
+    margin-top: $Event-icon-size / 2
+    margin-right: $Event-icon-size
+
+    display: inline-block
+    border: $Event-icon-border-size solid $color-grey
+    border-radius: 50%
+    background: $color-white
+
+    transform: translateX(- $Event-icon-size / 2 - $Event-icon-border-size)
+
+    +media-xs-only
+      margin-top: 0
+
+.Event-name
+  min-height: 22px
+  display: block
+  margin-left: $space-small
+
+
+.Event.Event--talk
+  .Event-time
+    color: $color-logo-dark-blue
+
+  .Event-details
+    +serif
+    font-style: italic
+    text-transform: capitalize
+
+    &:before
+      background: $color-logo-dark-blue
+      border-color: $color-logo-dark-blue
+
+.night
+  .Event-name
+    color: $color-white
+  .Event.Event--talk
+    .Event-time
+      color: $color-logo-light-blue
+
+    .Event-details
+      +serif
+      font-style: italic
+      text-transform: capitalize
+
+      &:before
+        background: $color-logo-light-blue
+        border-color: $color-logo-light-blue      
+
+.Event.Event--lunch
+  .Event-details:before
+    background: $color-green
+    border-color: $color-green
+
+.Event.Event--ligthningTalk
+  .Event-details
+    +serif
+    font-style: italic
+    text-transform: capitalize
+
+.Event.Event--party
+  .Event-time
+    color: $color-twitter-blue
+
+  .Event-details:before
+    background: $color-twitter-blue
+    border-color: $color-twitter-blue
+
+.Event.Event--coffeeBreak
+  .Event-time
+    color: $color-grey
+
+  .Event-details:before
+    background: $color-grey
+    border-color: $color-grey
+
+.Event.Event--space
+  +media-xs-only
+    display: none
+
+  .Event-details:before
+    border: none
+    background: none

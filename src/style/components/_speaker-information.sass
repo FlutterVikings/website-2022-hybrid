@@ -1,0 +1,56 @@
+$SpeakerInformation-spacing: 10px
+$SpeakerInformation-picture-size: 60px
+$SpeakerInformation-picture-size-mobile: 60px
+
+.SpeakerInformation
+  +sans-serif
+  // display: inline-flex
+  display: flex
+  justify-content: flex-start
+  align-items: center
+
+  margin: $SpeakerInformation-spacing 0 0 $space-small
+
+  color: $color-blue
+
+  font-weight: bold
+  font-style: normal
+  text-transform: uppercase
+
+  +media-xs-only
+    font-size: $theme-font-small
+
+.SpeakerInformation-pictureWrapper
+  width: $SpeakerInformation-picture-size
+  height: $SpeakerInformation-picture-size
+
+  overflow: hidden
+
+  margin-right: $SpeakerInformation-spacing
+
+  border-radius: 50%
+  border: solid 2px $color-yellow
+  background-color: $color-yellow
+
+  +media-xs-only
+    width: $SpeakerInformation-picture-size-mobile
+    height: $SpeakerInformation-picture-size-mobile
+
+.SpeakerInformation-picture
+  width: 100%
+  margin: auto
+
+.SpeakerInformation-name
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  .SpeakerInformation-talk
+      font-size: $theme-font-small
+
+  +media-xs-only
+    font-size: $theme-font-small
+
+.night 
+  .SpeakerInformation-name
+    color: $color-logo-light-blue  

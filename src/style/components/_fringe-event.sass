@@ -1,0 +1,77 @@
+.FringeEvent
+  max-width: 28%
+  min-width: 240px
+
+  flex: 1 0 240px
+  display: flex
+  flex-direction: column
+
+  padding: $space-small
+  margin: 0 0 $space-base 0
+
+  background-color: $color-white
+
+  border-radius: 10px
+
+.FringeEvent-information
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.FringeEvent-name,
+.FringeEvent-location
+  +sans-serif
+  +font-title
+
+  color: $color-blue
+
+  font-weight: bold
+
+  +media-xs-only
+    +font-text
+
+.FringeEvent-location
+  +font-text
+
+  display: inline-block
+
+  padding-top: 5px
+
+  color: $color-green
+
+  +media-xs-only
+    font-size: $theme-font-base
+
+.FringeEvent-locationIcon
+  display: inline-block
+
+  margin-right: 5px
+
+.FringeEvent-date
+  +serif
+  +font-text
+
+  margin-left: 5px
+
+  text-align: right
+
+  color: $color-grey
+  font-weight: normal
+
+  +media-xs-only
+    font-size: $theme-font-base
+
+.FringeEvent-description
+  +font-text
+
+  padding: $space-small 0
+
+  +media-xs-only
+    font-size: $theme-font-small
+
+.FringeEvent-marker
+  height: 13px
+  fill: $color-green
+
+  +media-xs-only
+    height: 10px

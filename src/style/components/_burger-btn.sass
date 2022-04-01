@@ -1,0 +1,84 @@
+$nav-burger-size: 50px
+$nav-burger-inner-size: $nav-burger-size * 0.3
+$nav-burger-line-height: 2px
+$nav-burger-line-width: $nav-burger-size * 0.4
+
+/** Dangerous math ahead. Touch with care */
+$nav-burger-line-left: ($nav-burger-size - $nav-burger-line-width) * 0.5
+$nav-burgerLine-top-offset:    ($nav-burger-size - $nav-burger-inner-size) * 0.5
+$nav-burgerLine-middle-offset: ($nav-burgerLine-top-offset + $nav-burger-inner-size) * .78
+$nav-burgerLine-bottom-offset: ($nav-burgerLine-top-offset + $nav-burger-inner-size)
+
+.BurgerBtn
+  
+  pointer-events: all
+  position: relative
+  width: $nav-burger-size
+  height: $nav-burger-size
+  display: block
+  border-radius: 50%
+  
+  cursor: pointer
+  opacity: 0.95
+  background-color: $color-green
+  margin-right: 40px
+  text-decoration: none
+  user-select: none
+  border: 0
+
+  &:before
+    
+    
+    height: $nav-burger-size
+    line-height: $nav-burger-size
+    text-align: right
+    text-transform: uppercase
+    color: $color-white
+
+.Nav--scrolled,
+.Nav--alwaysOpaque
+  .BurgerBtn:before
+    content: ''
+    display: block
+    width: 80px
+    margin-left: -80px
+
+.Nav--open
+  .BurgerBtn:before
+    content: 'close menu'
+    display: block
+    width: 200px
+    margin-left: -210px
+
+.BurgerBtn-line
+  
+  position: absolute
+  display: block
+  left: $nav-burger-line-left
+  height: $nav-burger-line-height
+  width: $nav-burger-line-width
+  background-color: $color-white
+  box-shadow: 0px 0px 1px color-white
+
+  &:nth-child(1)
+    top: $nav-burgerLine-top-offset
+  &:nth-child(2)
+    top: $nav-burgerLine-middle-offset
+  &:nth-child(3)
+    top: $nav-burgerLine-bottom-offset
+
+.BurgerBtn--open
+  color: $color-white
+  background-color: transparent
+  &:before
+    opacity: 1
+  .BurgerBtn-line
+    background-color: $color-white
+    &:nth-child(1)
+      transform: rotate(45deg)
+      top: $nav-burgerLine-middle-offset
+    &:nth-child(2)
+      opacity: 0
+    &:nth-child(3)
+      transform: rotate(-45deg)
+      top: $nav-burgerLine-middle-offset
