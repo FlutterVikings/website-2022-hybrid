@@ -43,8 +43,16 @@ const Footer = () => {
               href="https://2020.fluttervikings.com"
               rel={'noreferrer noopener nofollow'}
             >
-              Check out Online'2020 website
-            </a>
+              Online'2020 website
+            </a>{' '}
+            and{' '}
+            <a
+              target="_blank"
+              href="https://feb22.fluttervikings.com"
+              rel={'noreferrer noopener nofollow'}
+            >
+              Online'Feb22 website
+            </a>{' '}
           </div>
         </div>
       </section>
