@@ -7,10 +7,10 @@ import spacetime from 'spacetime';
 import TimezoneSelect from 'react-timezone-select';
 
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import { Timezone } from '../../models/Timezone';
 import { TitoSession, TitoSpeaker, useTito } from '../../hooks/useTito';
 import { FaceImage } from '../common/FaceImage';
+import NiceModal from '@ebay/nice-modal-react';
 
 interface Props {
   session: TitoSession;
@@ -51,12 +51,12 @@ const ProgramSection = ({ session, selectedTimezone, speakers }: Props) => {
                 const presenter = speakers.filter((sp) => sp.id === speakrId)[0];
                 return (
                   <div key={presenter.id}>
-                    <Link to={`/speakers/${presenter.id}`} className="SpeakerInformation">
+                    <a className="SpeakerInformation">
                       <div className="SpeakerInformation-pictureWrapper">
                         <FaceImage member={presenter} withFilter={false} />
                       </div>
                       <div className="SpeakerInformation-name">{presenter.fullName}</div>
-                    </Link>
+                    </a>
                   </div>
                 );
               })}

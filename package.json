@@ -82,6 +82,7 @@
   },
   "dependencies": {
     "@culturehq/add-to-calendar": "^1.1.2",
+    "@ebay/nice-modal-react": "^1.2.6",
     "gatsby": "^2.24.67",
     "gatsby-image": "^2.4.20",
     "gatsby-plugin-google-fonts": "^1.0.1",
@@ -99,6 +100,7 @@
     "react-scroll": "^1.8.1",
     "react-scroll-into-view": "^1.8.2",
     "react-timezone-select": "^0.9.7",
+    "slugify": "^1.6.5",
     "spacetime": "^6.9.0",
     "styled-bootstrap-grid": "^3.1.0",
     "styled-components": "^5.2.0",

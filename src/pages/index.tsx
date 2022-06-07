@@ -3,16 +3,12 @@ import {
   Layout,
   TheEvent,
   Scene,
-  Committee,
   Sponsors,
   Speakers,
   Diversity,
   Schedules,
-  TheImportantNotice,
 } from '../components';
 import { SEO } from '../components/base/SEO';
-import { Communities } from '../components/modules/Communities';
-import { Moderators } from '../components/modules/Moderators';
 import { Venue } from '../components/modules/Venue';
 
 export default () => {
@@ -23,14 +19,11 @@ export default () => {
       <TheEvent />
       <Speakers />
       <Diversity />
-      {/* <Committee /> */}
       <Schedules />
       {/* <Moderators /> */}
       <Sponsors />
       {/* <Communities /> */}
-      {/* <Team /> */}
       <Venue />
-      {/* <TheImportantNotice /> */}
     </Layout>
   );
 };
