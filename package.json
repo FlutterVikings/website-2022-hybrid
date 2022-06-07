@@ -88,6 +88,7 @@
     "gatsby-plugin-google-tagmanager": "^2.3.14",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
+    "gatsby-source-rest-api": "^0.2.3",
     "gatsby-transformer-json": "^2.4.13",
     "lodash": "^4.17.20",
     "polished": "^3.6.7",

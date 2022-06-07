@@ -1,8 +1,8 @@
 import React from 'react';
 import GatsbyImage, { FixedObject, FluidObject } from 'gatsby-image';
 import styled, { ThemeConsumer } from 'styled-components';
-import { People } from '../../models/People';
 import { VikingTheme } from '../../theme';
+import { TitoSpeaker } from '../../hooks/useTito';
 
 const PhotoTitle = styled.h3`
   position: absolute;
@@ -19,19 +19,22 @@ const PhotoTitle = styled.h3`
   }
 `;
 
-const PhotoFilter = styled.div`
+const PhotoFilter = styled.div<{ withFilter: number }>`
   display: flex;
   width: 100%;
   height: 100%;
   padding-bottom: 8px;
   flex-direction: column;
   justify-content: flex-end;
-  background-image: linear-gradient(
+  ${(props) =>
+    !props.withFilter
+      ? `background: none;`
+      : `background-image: linear-gradient(
     150deg,
     rgba(83, 246, 198, 0.3),
     rgba(7, 198, 249, 0.3),
     rgba(5, 87, 153, 0.6)
-  );
+  );`}
   cursor: pointer;
 `;
 
@@ -43,9 +46,15 @@ const PhotoBloc = styled.div`
   transition: opacity 0.2s ease;
 `;
 
-const PhotoWrapper = styled.div<{ theme: VikingTheme }>`
+const PhotoWrapper = styled.div<{ theme: VikingTheme; withFilter: number }>`
   position: relative;
+  img {
+    ${(props) => (!props.withFilter ? `filter: none;` : `filter: grayscale(1);`)}
+  }
   :hover {
+    img {
+      filter: none;
+    }
     ${PhotoFilter} {
       opacity: 1;
       background-image: none;
@@ -57,19 +66,21 @@ const PhotoWrapper = styled.div<{ theme: VikingTheme }>`
   }
 `;
 
-export const FaceImage = ({ member, fixed }: { member: People; fixed?: boolean }) => {
+export const FaceImage = ({
+  member,
+  withFilter = true,
+}: {
+  member: TitoSpeaker;
+  withFilter?: boolean;
+}) => {
   return (
     <ThemeConsumer>
       {(theme) => (
-        <PhotoWrapper theme={theme}>
-          {fixed ? (
-            <GatsbyImage fixed={member.image.fixed} />
-          ) : (
-            <GatsbyImage fluid={member.image.fluid} />
-          )}
+        <PhotoWrapper theme={theme} withFilter={withFilter ? 1 : 0}>
+          <img src={member.profilePicture} alt={member.fullName} />
           <PhotoBloc>
-            <PhotoFilter />
-            <PhotoTitle>{member.name}</PhotoTitle>
+            <PhotoFilter withFilter={withFilter ? 1 : 0} />
+            <PhotoTitle>{member.fullName}</PhotoTitle>
           </PhotoBloc>
         </PhotoWrapper>
       )}
@@ -87,14 +98,14 @@ export const ImageWrapper = ({
   return (
     <ThemeConsumer>
       {(theme) => (
-        <PhotoWrapper theme={theme}>
+        <PhotoWrapper theme={theme} withFilter={1}>
           {fixed ? (
             <GatsbyImage fixed={image.fixed} />
           ) : (
             <GatsbyImage fluid={image.fluid} />
           )}
           <PhotoBloc>
-            <PhotoFilter />
+            <PhotoFilter withFilter={1} />
             {/* <PhotoTitle>{member.name}</PhotoTitle> */}
           </PhotoBloc>
         </PhotoWrapper>

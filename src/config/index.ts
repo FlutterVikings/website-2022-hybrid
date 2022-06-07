@@ -40,9 +40,9 @@ export default {
   Google_Tag_Manager_ID: 'GTM-MFVN9Q8',
   defaultTimezone: {
     value: 'Europe/Amsterdam',
-    label: '(GMT+1:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna',
+    label: '(GMT+2:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna',
     altName: 'Central European Time',
-    abbrev: 'CET',
+    abbrev: 'CEST',
   },
   POST_PER_PAGE: 4,
 };

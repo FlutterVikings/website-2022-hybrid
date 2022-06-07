@@ -9,7 +9,8 @@
   "rules": {
     "prettier": true,
     "no-implicit-dependencies": false,
-    "react-a11y-anchors": false
+    "react-a11y-anchors": false,
+    "prefer-conditional-expression": false
   },
   "linterOptions": {
     "exclude": ["bin", "**/*.d.ts", "**/*.json"]

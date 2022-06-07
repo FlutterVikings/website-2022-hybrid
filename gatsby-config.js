@@ -56,6 +56,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-rest-api',
+      options: {
+        endpoints: ['https://sessionize.com/api/v2/8wk2u51q/view/All'],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: config.siteTitle,

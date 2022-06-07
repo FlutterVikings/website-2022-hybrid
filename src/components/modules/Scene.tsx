@@ -46,7 +46,7 @@ const Scene = () => {
           The biggest <span className="font__caesar">Nordic</span> Flutter Conference!
           <br />
           <p className="SceneOverlay-date">31 Aug - 1 Sep, 2022</p>
-          <p className="SceneOverlay-location">Hybrid - Oslo, Norway</p>
+          <p className="SceneOverlay-location">Oslo, Norway</p>
         </div>
         <div className="SceneOverlay-info">
           <p className="SceneOverlay-location">
@@ -57,15 +57,6 @@ const Scene = () => {
               href="https://fluttervikings.com/ticket"
             >
               Tickets
-            </a>{' '}
-            or{' '}
-            <a
-              className="Btn Btn--cfp Btn--cta"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://bit.ly/3tYfERV"
-            >
-              Call for proposals
             </a>
           </p>
         </div>

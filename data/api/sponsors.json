@@ -29,7 +29,19 @@
     "id": "stream",
     "name": "Stream.io Inc",
     "level": 1,
-    "link": "https://bit.ly/2Iphmq6"
+    "link": "https://bit.ly/3MwtIIa"
+  },
+  {
+    "id": "onesignal",
+    "name": "OneSignal, Inc. ",
+    "level": 3,
+    "link": "https://bit.ly/3xx1dF1"
+  },
+  {
+    "id": "appwrite",
+    "name": "Appwrite",
+    "level": 1,
+    "link": "https://bit.ly/3ayks98"
   },
   {
     "id": "codemagic",

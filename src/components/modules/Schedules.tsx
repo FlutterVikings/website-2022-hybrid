@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useAgenda } from '../../hooks/useAgenda';
 import { Container, MainTitle, Section } from '../common';
 import config from '../../config';
 import spacetime from 'spacetime';
@@ -7,164 +6,65 @@ import spacetime from 'spacetime';
 // @ts-ignore
 import TimezoneSelect from 'react-timezone-select';
 
-import { Agenda, Track } from '../../models/Agenda';
 import styled from 'styled-components';
-import GatsbyImage from 'gatsby-image';
-import { useSpeakers } from '../../hooks/useSpeakers';
-import { useAllFiles } from '../../hooks/useAllFiles';
 import { Link } from 'gatsby';
 import { Timezone } from '../../models/Timezone';
-import { AddToCal } from '../common/AddToCal';
-import { fontSize } from '../../theme/common';
+import { TitoSession, TitoSpeaker, useTito } from '../../hooks/useTito';
+import { FaceImage } from '../common/FaceImage';
 
 interface Props {
-  agendaDay: Agenda;
-  track: Track;
-  selectedTimezone: Timezone;
+  session: TitoSession;
+  selectedTimezone: string;
+  speakers: TitoSpeaker[];
 }
 
-const AgendaDay = ({ track, agendaDay, selectedTimezone }: Props) => {
-  const { name, date, dateISO } = agendaDay;
-  const { programs } = track;
-  const timezoneValue = selectedTimezone.value;
-  const spaceDate = spacetime(dateISO, config.defaultTimezone.value);
-
+const ProgramSection = ({ session, selectedTimezone, speakers }: Props) => {
+  // Event--ligthningTalk
+  const startTime = spacetime(session.startsAt).goto(selectedTimezone).time();
+  const endsTime = spacetime(session.endsAt).goto(selectedTimezone).time();
   return (
-    <div className="Agenda-column Agenda-column">
-      <div className="Agenda-columnTitle">
-        <p className="Agenda-day">{track.name}</p>
-        <p className="Agenda-date">{date}</p>
-        <span className="Agenda-dash" />
-      </div>
-      {programs &&
-        programs.map((program, i) => {
-          const {
-            title,
-            startTime,
-            endTime,
-            speaker,
-            isActivity,
-            winnerTime,
-            speakers,
-          } = program;
-          const timezoneBasedStartTime = spaceDate.time(startTime);
-          const timezoneBasedEndTime = spaceDate.time(endTime);
-          return (
-            <div
-              key={i}
-              className={`Event${speaker || speakers ? ' Event--talk' : ''}${
-                isActivity ? ' Event--lunch' : ''
-              }${winnerTime ? ' Event--coffeeBreak' : ''}${
-                speaker && speaker.talk?.lightening ? ' Event--ligthningTalk' : ''
-              }`}
-            >
-              <div className="Event-time">
-                {timezoneBasedStartTime.goto(timezoneValue).time()} -{' '}
-                {timezoneBasedEndTime.goto(timezoneValue).time()}
-              </div>
-              <div className="Event-details">
-                <span className="Event-name">{speaker?.talk?.title || title}</span>
-                {speaker && (
-                  <>
-                    <AddToCal
-                      startsAt={timezoneBasedStartTime
-                        .goto(timezoneValue)
-                        .format('iso')
-                        .toString()}
-                      endsAt={timezoneBasedEndTime
-                        .goto(timezoneValue)
-                        .format('iso')
-                        .toString()}
-                      location={timezoneValue}
-                      title={`${speaker?.talk?.title} by ${speaker?.name}` || title}
-                      desc={
-                        `${speaker?.talk?.description} https://flutterVikings.com` || ''
-                      }
-                    />
-
-                    <Link to={`/speakers/${speaker.id}`} className="SpeakerInformation">
-                      <div className="SpeakerInformation-pictureWrapper">
-                        <GatsbyImage
-                          className="SpeakerInformation-picture"
-                          fixed={speaker.image.fixed}
-                        />
-                      </div>
-                      <span className="SpeakerInformation-name">{speaker.name}</span>
-                    </Link>
-                    {speaker?.talk.coSpeaker && (
-                      <Link
-                        to={`/speakers/${speaker?.talk.coSpeaker.id}`}
-                        className="SpeakerInformation"
-                      >
-                        <div className="SpeakerInformation-pictureWrapper">
-                          <GatsbyImage
-                            className="SpeakerInformation-picture"
-                            fixed={speaker?.talk.coSpeaker.image.fixed}
-                          />
-                        </div>
-                        <div className="SpeakerInformation-name">
-                          {speaker?.talk.coSpeaker.name}
-                        </div>
-                      </Link>
-                    )}
-                  </>
-                )}
-                {speakers && (
-                  <>
-                    <AddToCal
-                      startsAt={timezoneBasedStartTime
-                        .goto(timezoneValue)
-                        .format('iso')
-                        .toString()}
-                      endsAt={timezoneBasedEndTime
-                        .goto(timezoneValue)
-                        .format('iso')
-                        .toString()}
-                      location={timezoneValue}
-                      title={`${speaker?.talk?.title} by ${speaker?.name}` || title}
-                      desc={
-                        `${speaker?.talk?.description} https://flutterVikings.com` || ''
-                      }
-                    />
-                    {speakers.map((presenter) => {
-                      return (
-                        <div key={presenter.id}>
-                          <Link
-                            to={`/speakers/${presenter.id}`}
-                            className="SpeakerInformation"
-                          >
-                            <div className="SpeakerInformation-pictureWrapper">
-                              <GatsbyImage
-                                className="SpeakerInformation-picture"
-                                fixed={presenter.image.fixed}
-                              />
-                            </div>
-                            <div className="SpeakerInformation-name">
-                              {presenter.name}
-                              <div className="SpeakerInformation-talk">
-                                {presenter.talk?.title}
-                              </div>
-                            </div>
-                          </Link>
-                        </div>
-                      );
-                    })}
-                  </>
-                )}
-              </div>
-            </div>
-          );
-        })}
-      <div className="Event Event--space">
-        <p className="Event-time" />
+    <>
+      <div
+        key={session.id}
+        className={`Event${session.speakers.length > 0 ? ' Event--talk' : ''}${
+          session.isServiceSession ? ' Event--lunch' : ''
+        }`}
+      >
+        <div className="Event-time">
+          {startTime} - {endsTime}
+        </div>
         <div className="Event-details">
-          <span className="Event-name" />
+          <span className="Event-name">{session.title}</span>
+          {session.speakers.length > 0 && (
+            <>
+              {/* <AddToCal
+                startsAt={timezoneBasedStartTime
+                  .goto(timezoneValue)
+                  .format('iso')
+                  .toString()}
+                endsAt={timezoneBasedEndTime.goto(timezoneValue).format('iso').toString()}
+                location={timezoneValue}
+                title={`${speaker?.talk?.title} by ${speaker?.name}` || title}
+                desc={`${speaker?.talk?.description} https://flutterVikings.com` || ''}
+              /> */}
+              {session.speakers.map((speakrId) => {
+                const presenter = speakers.filter((sp) => sp.id === speakrId)[0];
+                return (
+                  <div key={presenter.id}>
+                    <Link to={`/speakers/${presenter.id}`} className="SpeakerInformation">
+                      <div className="SpeakerInformation-pictureWrapper">
+                        <FaceImage member={presenter} withFilter={false} />
+                      </div>
+                      <div className="SpeakerInformation-name">{presenter.fullName}</div>
+                    </Link>
+                  </div>
+                );
+              })}
+            </>
+          )}
         </div>
       </div>
-      <div className="Agenda-columnFooter">
-        <span className="Agenda-dash" />
-      </div>
-    </div>
+    </>
   );
 };
 
@@ -227,15 +127,26 @@ const Notice = styled.div`
 `;
 
 const Schedules = () => {
-  const images = useAllFiles();
-  const speakers = useSpeakers(images);
-  const agenda = useAgenda(speakers);
-  const [selectedTab, seTSelectedTab] = useState(1);
+  const { speakers, sessions, rooms, categories } = useTito();
+  const today = spacetime.now().format('mm/yy').toString();
+  const [selectedDay, setSelectedDay] = useState<string>(today);
+  const [selectedTab, setSelectedTab] = useState<string | null>('2022-08-31');
+  const [selectedRoomId, setSelectedRoomId] = useState<number | null>(24847);
+  const timezone: Timezone = {
+    value: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    label: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    altName: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    abbrev: Intl.DateTimeFormat().resolvedOptions().timeZone,
+  };
   const [selectedTimezone, setSelectedTimezone] = useState<Timezone>(
     config.defaultTimezone,
   );
 
-  const setTab = (index: number) => () => seTSelectedTab(index);
+  const setTab = (day: string) => () => {
+    setSelectedDay(day);
+    setSelectedTab(day);
+  };
+  const setRoomTab = (room: number) => () => setSelectedRoomId(room);
   const [now, setNow] = useState(spacetime.now());
   let interval: any;
 
@@ -249,78 +160,108 @@ const Schedules = () => {
     }, 1000 * 60);
   }, []);
 
+  const agenda = sessions.reduce<{
+    [day: string]: {
+      [roomId: number]: TitoSession[];
+    };
+  }>((acc, session) => {
+    const day = session.startsAt.split('T')[0];
+    if (acc[day]) {
+      if (acc[day][session.roomId]) {
+        acc[day][session.roomId] = [...acc[day][session.roomId], session];
+      } else {
+        acc[day][session.roomId] = [session];
+      }
+    } else {
+      acc[day] = {
+        [session.roomId]: [session],
+      };
+    }
+    return acc;
+  }, {});
+
+  const roomName = rooms.find((room) => room.id === selectedRoomId)?.name;
+
   return (
     <>
       <Section>
         <Container id="agenda">
           <MainTitle title="Event Agenda" titleStrokeText={'Schedule'} />
           <Notice>
-            {/* <p className="SceneOverlay-location">
-              <a
-                className="Btn Btn--ticket Btn--cta"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.youtube.com/playlist?list=PL4dBIh1xps-EXi7ZuOVRAg2MFDvjxQpR3"
-              >
-                Youtube
-              </a>{' '}
-              or
-              <a
-                className="Btn Btn--ticket Btn--cta"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.twitch.tv/FlutterCommunity"
-              >
-                Twitch
-              </a>{' '}
-              or
-              <a
-                className="Btn Btn--ticket Btn--cta"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://twitter.com/flutterVikings"
-              >
-                Twitter
-              </a>
-            </p> */}
-            {/* <br /> */}
-            <p>
-              Your time now is {now.format('nice-full')} based on{' '}
-              {selectedTimezone.altName} ({selectedTimezone.abbrev})
-            </p>
+            <p>The schedule time is based on Europe/Oslo (CEST) timezone.</p>
             <br />
-            <TimezoneSelect value={selectedTimezone} onChange={setSelectedTimezone} />
+            {/* <TimezoneSelect value={selectedTimezone} onChange={setSelectedTimezone} /> */}
+          </Notice>
+          <Notice>
+            <h3 className="text-center">Days</h3>
           </Notice>
           <div className="Agenda-twoColumnContainer">
-            {agenda.map((agendaDay, i) => (
+            {Object.keys(agenda).map((agendaDay) => (
               <AgendaTabButton
-                selected={i === selectedTab}
+                selected={agendaDay === selectedDay || agendaDay === selectedTab}
                 className="Agenda-columnTitle"
-                key={i}
-                onClick={setTab(i)}
+                key={agendaDay}
+                onClick={setTab(agendaDay)}
               >
-                <p className="Agenda-day">{agendaDay.name}</p>
-                <p className="Agenda-date">{agendaDay.date}</p>
-                {i === selectedTab && <CheckMark />}
+                <p className="Agenda-day">{agendaDay}</p>
+                <p className="Agenda-date">{spacetime(agendaDay).format('day')}</p>
+                {(agendaDay === selectedDay || agendaDay === selectedTab) && (
+                  <CheckMark />
+                )}
               </AgendaTabButton>
             ))}
           </div>
-          <br />
-          <br />
-          <div className="Agenda-twoColumnContainer">
-            {agenda.map(
-              (agendaDay, i) =>
-                i === selectedTab &&
-                agendaDay.tracks.map((track, j) => (
-                  <AgendaDay
-                    key={i + j}
-                    selectedTimezone={selectedTimezone}
-                    agendaDay={agendaDay}
-                    track={track}
-                  />
-                )),
-            )}
-          </div>
+          {selectedTab && selectedDay && (
+            <>
+              <br />
+              <br />
+              <Notice>
+                <h3 className="text-center">Rooms</h3>
+              </Notice>
+              <div className="Agenda-twoColumnContainer">
+                {rooms.map((room) => (
+                  <AgendaTabButton
+                    selected={room.id === selectedRoomId}
+                    className="Agenda-columnTitle"
+                    key={room.id}
+                    onClick={setRoomTab(room.id)}
+                  >
+                    <p className="Agenda-day">{room.name}</p>
+                    {room.id === selectedRoomId && <CheckMark />}
+                  </AgendaTabButton>
+                ))}
+              </div>
+            </>
+          )}
+          {roomName && selectedDay && selectedRoomId && (
+            <>
+              <div className="Agenda-twoColumnContainer">
+                <div className="Agenda-column Agenda-column">
+                  <Notice>
+                    <h3 className="text-center">{roomName}</h3>
+                    <p>{spacetime(selectedDay).format('day')}</p>
+                  </Notice>
+                  {selectedTab
+                    ? agenda[selectedTab][selectedRoomId].map((session) => (
+                        <ProgramSection
+                          key={session.id}
+                          session={session}
+                          selectedTimezone={selectedTimezone.value}
+                          speakers={speakers}
+                        />
+                      ))
+                    : agenda[selectedDay][selectedRoomId].map((session) => (
+                        <ProgramSection
+                          key={session.id}
+                          session={session}
+                          selectedTimezone={selectedTimezone.value}
+                          speakers={speakers}
+                        />
+                      ))}
+                </div>
+              </div>
+            </>
+          )}
         </Container>
       </Section>
     </>

@@ -21,10 +21,10 @@ export default () => {
       <SEO />
       <Scene />
       <TheEvent />
-      {/* <Committee /> */}
+      <Speakers />
       <Diversity />
-      {/* <Speakers /> */}
-      {/* <Schedules /> */}
+      {/* <Committee /> */}
+      <Schedules />
       {/* <Moderators /> */}
       <Sponsors />
       {/* <Communities /> */}
