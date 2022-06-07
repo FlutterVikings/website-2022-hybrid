@@ -10,7 +10,6 @@ import styled from 'styled-components';
 import { Timezone } from '../../models/Timezone';
 import { TitoSession, TitoSpeaker, useTito } from '../../hooks/useTito';
 import { FaceImage } from '../common/FaceImage';
-import NiceModal from '@ebay/nice-modal-react';
 
 interface Props {
   session: TitoSession;
