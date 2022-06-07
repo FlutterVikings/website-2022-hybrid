@@ -94,7 +94,7 @@ const Sponsors = () => {
     <>
       <ThemeConsumer>
         {(theme) => (
-          <Section>
+          <Section bgColor={theme.colors.sectionHighLight}>
             <Container>
               <MainTitle title="Our Supporters" titleStrokeText={'sponsors'} />
               <SponsorsLevel title="Gold" list={gold} theme={theme} />

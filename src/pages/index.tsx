@@ -17,8 +17,8 @@ export default () => {
       <SEO />
       <Scene />
       <TheEvent />
-      <Speakers />
       <Diversity />
+      <Speakers />
       <Schedules />
       {/* <Moderators /> */}
       <Sponsors />
