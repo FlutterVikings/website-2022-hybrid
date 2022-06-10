@@ -1,6 +1,4 @@
 import { useStaticQuery, graphql } from 'gatsby';
-import { Agenda } from '../models/Agenda';
-import { Speaker } from '../models/Speaker';
 
 export interface TitoSpeakerLink {
   linkType: 'Twitter' | 'LinkedIn';

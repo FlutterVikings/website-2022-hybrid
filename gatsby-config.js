@@ -31,6 +31,7 @@ module.exports = {
         display: 'swap',
       },
     },
+    'gatsby-plugin-antd',
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
