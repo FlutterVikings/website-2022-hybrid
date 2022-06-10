@@ -1,16 +1,10 @@
 [
   {
     "id": "google",
+    "dark": "google-light",
     "name": "Google",
     "level": 1,
     "link": "https://bit.ly/3ps1AeP"
-  },
-
-  {
-    "id": "manning",
-    "name": "Manning",
-    "level": 3,
-    "link": "https://bit.ly/38F5yuX"
   },
   {
     "id": "microsoft",
@@ -38,6 +32,13 @@
     "link": "https://bit.ly/3xx1dF1"
   },
   {
+    "id": "somniosoftware",
+    "dark": "somniosoftware3",
+    "name": "Somnio Software",
+    "level": 3,
+    "link": "https://bit.ly/3aU6vCK"
+  },
+  {
     "id": "appwrite",
     "name": "Appwrite",
     "level": 1,
@@ -51,6 +52,7 @@
   },
   {
     "id": "theatcompany",
+    "dark": "theatcompany-light",
     "name": "The @ Company",
     "level": 2,
     "link": "https://bit.ly/36uvtT6"
