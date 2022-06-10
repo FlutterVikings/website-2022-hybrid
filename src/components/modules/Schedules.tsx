@@ -261,7 +261,7 @@ const Schedules = () => {
                 <div className="Agenda-column Agenda-column">
                   <Notice>
                     <h3 className="text-center">{roomName}</h3>
-                    <p>{spacetime(selectedDay).goto('Europe/Oslo').format('day')}</p>
+                    <p>{spacetime(selectedTab).goto('Europe/Oslo').format('day')}</p>
                   </Notice>
                   {selectedTab
                     ? agenda[selectedTab][selectedRoomId].map((session) => (
