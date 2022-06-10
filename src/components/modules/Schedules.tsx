@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, MainTitle, Section } from '../common';
 import config from '../../config';
 import spacetime from 'spacetime';
+import NiceModal from '@ebay/nice-modal-react';
 
 // @ts-ignore
 import TimezoneSelect from 'react-timezone-select';
@@ -10,6 +11,8 @@ import styled from 'styled-components';
 import { Timezone } from '../../models/Timezone';
 import { TitoSession, TitoSpeaker, useTito } from '../../hooks/useTito';
 import { FaceImage } from '../common/FaceImage';
+import { AddToCal } from '../common/AddToCal';
+import { SpeakerModal } from '../../templates/speaker';
 
 interface Props {
   session: TitoSession;
@@ -37,25 +40,30 @@ const ProgramSection = ({ session, selectedTimezone, speakers }: Props) => {
           {session.speakers.length > 0 && (
             <>
               {/* <AddToCal
-                startsAt={timezoneBasedStartTime
-                  .goto(timezoneValue)
+                startsAt={spacetime(session.startsAt)
+                  .goto('Europe/Oslo')
                   .format('iso')
                   .toString()}
-                endsAt={timezoneBasedEndTime.goto(timezoneValue).format('iso').toString()}
-                location={timezoneValue}
-                title={`${speaker?.talk?.title} by ${speaker?.name}` || title}
-                desc={`${speaker?.talk?.description} https://flutterVikings.com` || ''}
+                endsAt={spacetime(session.endsAt)
+                  .goto('Europe/Oslo')
+                  .format('iso')
+                  .toString()}
+                location={'Europe/Oslo'}
+                title={`${session.title} by ${session.speakers.reduce(
+                  (acc, s) => {
+                    const presenter = speakers.filter((sp) => sp.id === s.toString())[0];
+                    acc+= `${presenter.fullName}, `
+                    return acc;
+                  }),
+                  '',)
+                }`}
+                desc={`${session.description}` || ''}
               /> */}
               {session.speakers.map((speakrId) => {
                 const presenter = speakers.filter((sp) => sp.id === speakrId)[0];
                 return (
                   <div key={presenter.id}>
-                    <a className="SpeakerInformation">
-                      <div className="SpeakerInformation-pictureWrapper">
-                        <FaceImage member={presenter} withFilter={false} />
-                      </div>
-                      <div className="SpeakerInformation-name">{presenter.fullName}</div>
-                    </a>
+                    <SpeakerButton presenter={presenter} />
                   </div>
                 );
               })}
@@ -64,6 +72,21 @@ const ProgramSection = ({ session, selectedTimezone, speakers }: Props) => {
         </div>
       </div>
     </>
+  );
+};
+
+const SpeakerButton = ({ presenter }: { presenter: TitoSpeaker }) => {
+  const handleButton = (e: any) => {
+    e.preventDefault();
+    NiceModal.show(SpeakerModal, { speaker: presenter });
+  };
+  return (
+    <a className="SpeakerInformation" onClick={handleButton} role="button">
+      <div className="SpeakerInformation-pictureWrapper">
+        <FaceImage member={presenter} withFilter={false} />
+      </div>
+      <div className="SpeakerInformation-name">{presenter.fullName}</div>
+    </a>
   );
 };
 

@@ -116,6 +116,8 @@ const Speaker = ({ speaker }: { speaker: TitoSpeaker }) => {
                     __html: session.description ?? '',
                   }}
                 />
+                <br />
+                <br />
               </div>
             ) : null;
           })}
