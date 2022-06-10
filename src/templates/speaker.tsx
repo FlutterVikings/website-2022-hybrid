@@ -12,6 +12,9 @@ const SpeakerRow = styled.div`
 `;
 const SpeakerImage = styled.div`
   flex: 1;
+  > img {
+    border-radius: 50%;
+  }
 `;
 const SpeakerInfo = styled.div`
   padding: 0 4rem;
