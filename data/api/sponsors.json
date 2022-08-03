@@ -84,6 +84,12 @@
     "link": "https://bit.ly/3pL7UPE"
   },
   {
+    "id": "amplify",
+    "name": "AWS Amplify",
+    "level": 1,
+    "link": "https://go.aws/3BFujWo"
+  },
+  {
     "id": "bouvet",
     "dark": "bouvet_light",
     "name": "Bouvet",
@@ -96,6 +102,20 @@
     "name": "Olavstoppen",
     "level": 2,
     "link": "https://bit.ly/3Iqvrxd"
+  },
+  {
+    "id": "talsec",
+    "dark": "talsecdark",
+    "name": "Talsec",
+    "level": 2,
+    "link": "https://bit.ly/3boAG5J"
+  },
+  {
+    "id": "sentry",
+    "dark": "sentrydark",
+    "name": "Sentry.io",
+    "level": 2,
+    "link": "https://bit.ly/3OQJ0IR"
   },
   {
     "id": "rebelappstudio",
