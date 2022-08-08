@@ -1,5 +1,4 @@
 import React from 'react';
-import GatsbyImage, { FixedObject, FluidObject } from 'gatsby-image';
 import styled, { ThemeConsumer } from 'styled-components';
 import { VikingTheme } from '../../theme';
 import { TitoSpeaker } from '../../hooks/useTito';
@@ -90,20 +89,14 @@ export const FaceImage = ({
 
 export const ImageWrapper = ({
   image,
-  fixed,
 }: {
-  image: { fixed: FixedObject; fluid: FluidObject };
-  fixed?: boolean;
+  image: string;
 }) => {
   return (
     <ThemeConsumer>
       {(theme) => (
         <PhotoWrapper theme={theme} withFilter={1}>
-          {fixed ? (
-            <GatsbyImage fixed={image.fixed} />
-          ) : (
-            <GatsbyImage fluid={image.fluid} />
-          )}
+          <img src={image} />
           <PhotoBloc>
             <PhotoFilter withFilter={1} />
             {/* <PhotoTitle>{member.name}</PhotoTitle> */}

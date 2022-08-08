@@ -1,10 +1,12 @@
+@use "sass:math";
+
 $star-number: 150;
 $stars-current: 0;
 $var-wave: 1300;
 $wave-margin: calc(-#{$var-wave}px / 1);
 @function get-vw($target) {
   $vw-context: (1000 * 0.01) * 1px;
-  @return ($target/$vw-context) * 1vw;
+  @return math.div($target, $vw-context) * 1vw;
 }
 $aur-number: get-vw(72px);
 

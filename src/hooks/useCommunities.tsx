@@ -8,7 +8,7 @@ export const useCommunities = (images: FileImage[]): Sponsor[] => {
       items: allCommunitiesJson {
         edges {
           node {
-            id
+            sponsor_id
             link
             name
             level
@@ -18,7 +18,7 @@ export const useCommunities = (images: FileImage[]): Sponsor[] => {
     }
   `);
   return items.edges.map((sp: any) => {
-    const image = images.find((img) => img.name === sp.node.id);
+    const image = images.find((img) => img.name === sp.node.sponsor_id);
     return new Sponsor(sp.node, image);
   });
 };

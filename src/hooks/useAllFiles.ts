@@ -10,7 +10,13 @@ export const useAllFiles = (dir?: RelativeDirectory): FileImage[] => {
             name
             publicURL
             relativeDirectory
-            childImageSharp {
+          }
+        }
+      }
+    }
+  `);
+  /*
+  childImageSharp {
               fixed(width: 60, height: 60, cropFocus: CENTER, grayscale: true) {
                 ...GatsbyImageSharpFixed_withWebp
               }
@@ -24,11 +30,7 @@ export const useAllFiles = (dir?: RelativeDirectory): FileImage[] => {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
-          }
-        }
-      }
-    }
-  `);
+  */
   const allImages: FileImage[] = images.edges.map((img: any) => img.node);
 
   switch (dir) {

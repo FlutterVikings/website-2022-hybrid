@@ -6,10 +6,11 @@ interface SEO {
   title?: string;
   description?: string;
   path?: string;
+  image?: string;
 }
 
 export const SEO = (props: SEO) => {
-  const image = config.siteBanner;
+  const image = props.image ? props.image : config.siteBanner;
   const title = props.title ? `${props.title} | ${config.siteTitle}` : config.siteTitle;
   const description = props.description ? props.description : config.siteDescription;
   const url = props.path

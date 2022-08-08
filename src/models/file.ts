@@ -1,5 +1,3 @@
-import { FixedObject, FluidObject } from 'gatsby-image';
-
 export enum RelativeDirectory {
   speakers = 'speakers',
   committee = 'committee',
@@ -14,5 +12,4 @@ export interface FileImage {
   name: string;
   publicURL: string;
   relativeDirectory: RelativeDirectory;
-  childImageSharp: { fixed: FixedObject; fluid: FluidObject };
 }

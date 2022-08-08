@@ -26,7 +26,7 @@ const SponsorImage = styled.div<{ theme: VikingTheme }>`
   g,
   path.dark {
     fill: ${(props) =>
-      props.theme.isDark ? props.theme.colors.white : props.theme.colors.black};
+    props.theme.isDark ? props.theme.colors.white : props.theme.colors.black};
   }
   :hover {
     transition: all 0.1s linear;
@@ -77,7 +77,7 @@ const SponsorsLevel = ({
       <SponsorHeadline>{title}</SponsorHeadline>
       <ResponsiveGrid>
         {list.map((sp) => (
-          <SponsorCard key={sp.id} theme={theme} sponsor={sp} />
+          <SponsorCard key={sp.sponsor_id} theme={theme} sponsor={sp} />
         ))}
       </ResponsiveGrid>
     </SponsorSection>
@@ -87,6 +87,7 @@ const SponsorsLevel = ({
 const Sponsors = () => {
   const images = useAllFiles(RelativeDirectory.sponsors);
   const sponsors = useSponsors(images);
+  console.log(sponsors)
   const gold = sponsors.filter((s) => s.level === 1);
   const silver = sponsors.filter((s) => s.level === 2);
   const bronze = sponsors.filter((s) => s.level === 3);

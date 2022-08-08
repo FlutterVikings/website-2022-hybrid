@@ -1,14 +1,14 @@
 import React from 'react';
 import { Content, Header, Layout, Wrapper } from '../components';
-import { Helmet } from 'react-helmet';
 import config from '../config';
 import { Link } from 'gatsby';
+import { SEO } from '../components/base/SEO';
 
 export default () => {
   return (
     <Layout>
       <Wrapper>
-        <Helmet title={`404 not found | ${config.siteTitle}`} />
+        <SEO title={`404 not found | ${config.siteTitle}`} />
         <Header>
           <Link to="/">{config.siteTitle}</Link>
         </Header>

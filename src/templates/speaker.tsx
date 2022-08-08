@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import NiceModal, { useModal } from '@ebay/nice-modal-react';
 import { Modal } from 'antd';
+import slugify from 'slugify';
 
 import { TitoSpeaker, useTito } from '../hooks/useTito';
 import spacetime from 'spacetime';
@@ -21,7 +22,7 @@ const SpeakerInfo = styled.div`
   flex: 1;
 `;
 
-export const SpeakerModal = NiceModal.create(({ speaker }: { speaker: TitoSpeaker }) => {
+export const SpeakerModal = NiceModal.create(({ speaker, noSession }: { speaker: TitoSpeaker, noSession: boolean }) => {
   const modal = useModal();
   return (
     <Modal
@@ -33,12 +34,12 @@ export const SpeakerModal = NiceModal.create(({ speaker }: { speaker: TitoSpeake
       onCancel={modal.hide}
       afterClose={modal.remove}
     >
-      <Speaker speaker={speaker} />
+      <Speaker speaker={speaker} noSession={noSession} />
     </Modal>
   );
 });
 
-const Speaker = ({ speaker }: { speaker: TitoSpeaker }) => {
+const Speaker = ({ speaker, noSession = false }: { speaker: TitoSpeaker, noSession: boolean }) => {
   const { sessions, rooms } = useTito();
   const findSessionById = (id: number) => {
     return sessions.find((s) => s.id === id.toString());
@@ -91,36 +92,39 @@ const Speaker = ({ speaker }: { speaker: TitoSpeaker }) => {
             })}
         </SpeakerInfo>
       </SpeakerRow>
+
       <SpeakerRow>
         <div>
           <br />
           {speaker.bio}
-          <br />
-          <br />
-          <h2 className="font__caesar">Talk</h2>
-          {speaker.sessions.map((s) => {
-            const session = findSessionById(s);
-            const room = session ? findRoomById(session?.roomId) : null;
-            return session && room ? (
-              <div key={s}>
-                <h2>{session.title}</h2>
-                <p>
-                  <b>
-                    {spacetime(session.startsAt).goto('Europe/Oslo').format('nice-full')}{' '}
-                    in <span className="font__caesar">{room.name}</span>
-                  </b>
-                </p>
-                <br />
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: session.description ?? '',
-                  }}
-                />
-                <br />
-                <br />
-              </div>
-            ) : null;
-          })}
+          {!noSession && <>
+            <br />
+            <br />
+            <h2 className="font__caesar">Talk</h2>
+            <hr />
+            {speaker.sessions.map((s) => {
+              const session = findSessionById(s);
+              const room = session ? findRoomById(session?.roomId) : null;
+              return session && room ? (
+                <div key={s}>
+                  <h2>{session.title}</h2>
+                  <p>
+                    <b>
+                      {spacetime(session.startsAt).goto('Europe/Oslo').format('nice-full')}{' '}
+                      in <span className="font__caesar">{room.name}</span>
+                    </b>
+                  </p>
+                  <br />
+                  <a
+                    target='_blank'
+                    rel={'noreferrer noopener nofollow'}
+                    href={`/${slugify(session.title, { lower: true, trim: true, strict: true })}`}>🔗 Read more</a>
+                  <br />
+                  <br />
+                </div>
+              ) : null;
+            })}
+          </>}
         </div>
       </SpeakerRow>
     </>

@@ -13,7 +13,7 @@ $Event-icon-border-size: 1px
   width: 50%
   font-size: 1.4rem
   padding: $Event-icon-size 0
-  margin-top: $Event-icon-size / 2 - $Event-icon-border-size * 2
+  margin-top: $Event-icon-size * 0.5 - $Event-icon-border-size * 2
 
   text-align: right
   color: $color-grey
@@ -52,7 +52,7 @@ $Event-icon-border-size: 1px
     width: $Event-icon-size
     height: $Event-icon-size
 
-    margin-top: $Event-icon-size / 2
+    margin-top: $Event-icon-size * 0.5
     margin-right: $Event-icon-size
 
     display: inline-block
@@ -60,7 +60,7 @@ $Event-icon-border-size: 1px
     border-radius: 50%
     background: $color-white
 
-    transform: translateX(- $Event-icon-size / 2 - $Event-icon-border-size)
+    transform: translateX(- $Event-icon-size * 0.5 - $Event-icon-border-size)
 
     +media-xs-only
       margin-top: 0

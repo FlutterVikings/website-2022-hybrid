@@ -6,7 +6,7 @@ import { Content } from '../common';
 const HeaderWrapper = styled.header<{ banner?: string }>`
   position: relative;
   background-size: cover;
-  padding: 8rem 2rem 10rem;
+  padding: 8rem 2rem 5rem;
   text-align: center;
 `;
 

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Layout, Section, Header, Content } from '../components';
 // @ts-ignore
 import TimezoneSelect from 'react-timezone-select';
-import { SEO } from '../components/base/SEO';
+import { Head, SEO } from '../components/base/SEO';
 
 const ActivityRow = styled.div`
   display: flex;

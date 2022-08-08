@@ -8,7 +8,7 @@ export const useSponsors = (images: FileImage[]): Sponsor[] => {
       items: allSponsorsJson {
         edges {
           node {
-            id
+            sponsor_id
             dark
             link
             name
@@ -19,7 +19,7 @@ export const useSponsors = (images: FileImage[]): Sponsor[] => {
     }
   `);
   return items.edges.map((sp: any) => {
-    const image = images.find((img) => img.name === sp.node.id);
+    const image = images.find((img) => img.name === sp.node.sponsor_id);
     const darkImage = images.find((img) => img.name === sp.node.dark);
     return new Sponsor(sp.node, image, darkImage);
   });

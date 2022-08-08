@@ -3,7 +3,6 @@ import { Container, MainTitle, Section } from '../common';
 import config from '../../config';
 import spacetime from 'spacetime';
 import NiceModal from '@ebay/nice-modal-react';
-
 // @ts-ignore
 import TimezoneSelect from 'react-timezone-select';
 
@@ -13,6 +12,7 @@ import { TitoSession, TitoSpeaker, useTito } from '../../hooks/useTito';
 import { FaceImage } from '../common/FaceImage';
 import { AddToCal } from '../common/AddToCal';
 import { SpeakerModal } from '../../templates/speaker';
+import slugify from 'slugify';
 
 interface Props {
   session: TitoSession;
@@ -24,22 +24,37 @@ const ProgramSection = ({ session, selectedTimezone, speakers }: Props) => {
   // Event--ligthningTalk
   const startTime = spacetime(session.startsAt).goto(selectedTimezone).time();
   const endsTime = spacetime(session.endsAt).goto(selectedTimezone).time();
+
+  const getSpeakersName = (session: TitoSession): string => session.speakers.reduce(
+    (acc, s, i) => {
+      const presenter = speakers.filter((sp) => sp.id === s.toString())[0];
+      acc += `${presenter.fullName}`;
+      if (i < session.speakers.length - 1) {
+        acc += ', ';
+      }
+      return acc;
+    }, '');
+
   return (
     <>
       <div
         key={session.id}
-        className={`Event${session.speakers.length > 0 ? ' Event--talk' : ''}${
-          session.isServiceSession ? ' Event--lunch' : ''
-        }`}
+        className={`Event${session.speakers.length > 0 ? ' Event--talk' : ''}${session.isServiceSession ? ' Event--lunch' : ''
+          }`}
       >
         <div className="Event-time">
           {startTime} - {endsTime}
         </div>
         <div className="Event-details">
-          <span className="Event-name">{session.title}</span>
+          <span className="Event-name">
+            {!session.isServiceSession ? <a
+              target='_blank'
+              rel={'noreferrer noopener nofollow'}
+              href={`/${slugify(session.title, { lower: true, trim: true, strict: true })}`}>🔗 {session.title}</a> : session.title}
+          </span>
           {session.speakers.length > 0 && (
             <>
-              {/* <AddToCal
+              <AddToCal
                 startsAt={spacetime(session.startsAt)
                   .goto('Europe/Oslo')
                   .format('iso')
@@ -49,16 +64,9 @@ const ProgramSection = ({ session, selectedTimezone, speakers }: Props) => {
                   .format('iso')
                   .toString()}
                 location={'Europe/Oslo'}
-                title={`${session.title} by ${session.speakers.reduce(
-                  (acc, s) => {
-                    const presenter = speakers.filter((sp) => sp.id === s.toString())[0];
-                    acc+= `${presenter.fullName}, `
-                    return acc;
-                  }),
-                  '',)
-                }`}
+                title={`${session.title} by ${getSpeakersName(session)}`}
                 desc={`${session.description}` || ''}
-              /> */}
+              />
               {session.speakers.map((speakrId) => {
                 const presenter = speakers.filter((sp) => sp.id === speakrId)[0];
                 return (
@@ -75,7 +83,7 @@ const ProgramSection = ({ session, selectedTimezone, speakers }: Props) => {
   );
 };
 
-const SpeakerButton = ({ presenter }: { presenter: TitoSpeaker }) => {
+export const SpeakerButton = ({ presenter }: { presenter: TitoSpeaker }) => {
   const handleButton = (e: any) => {
     e.preventDefault();
     NiceModal.show(SpeakerModal, { speaker: presenter });
@@ -109,9 +117,9 @@ const AgendaTabButton = styled.button<{ selected?: boolean }>`
   cursor: pointer;
   border: 3px solid
     ${(props) =>
-      props.selected
-        ? props.theme.colors.logoLightBlue
-        : props.theme.colors.logoDarkBlue};
+    props.selected
+      ? props.theme.colors.logoLightBlue
+      : props.theme.colors.logoDarkBlue};
   background: ${(props) => props.theme.colors.sectionbg};
   color: ${(props) =>
     props.theme.isDark ? props.theme.colors.white : props.theme.colors.black};
@@ -134,7 +142,7 @@ const Notice = styled.div`
   .css-1pahdxg-control,
   .css-26l3qy-menu {
     background: ${(props) =>
-      props.theme.isDark ? props.theme.colors.black : props.theme.colors.grey};
+    props.theme.isDark ? props.theme.colors.black : props.theme.colors.grey};
     text-align: left;
     :hover,
     :focus {
@@ -144,7 +152,7 @@ const Notice = styled.div`
   .css-1uccc91-singleValue,
   .css-b8ldur-Input {
     color: ${(props) =>
-      props.theme.isDark ? props.theme.colors.white : props.theme.colors.black};
+    props.theme.isDark ? props.theme.colors.white : props.theme.colors.black};
   }
 `;
 
@@ -152,7 +160,7 @@ const Schedules = () => {
   const { speakers, sessions, rooms, categories } = useTito();
   const today = spacetime.now().format('mm/yy').toString();
   const [selectedDay, setSelectedDay] = useState<string>(today);
-  const [selectedTab, setSelectedTab] = useState<string | null>('2022-08-31');
+  const [selectedTab, setSelectedTab] = useState<string>('2022-08-31');
   const [selectedRoomId, setSelectedRoomId] = useState<number | null>(24847);
   const timezone: Timezone = {
     value: Intl.DateTimeFormat().resolvedOptions().timeZone,
@@ -210,9 +218,9 @@ const Schedules = () => {
         <Container id="agenda">
           <MainTitle title="Event Agenda" titleStrokeText={'Schedule'} />
           <Notice>
-            <p>The schedule time is based on Europe/Oslo (CEST) timezone.</p>
+            <p>The schedule time is based on <b style={{ color: '#cebd00' }}>{selectedTimezone.label.split(')')[0].split('(')[1]}  ({selectedTimezone.abbrev}) </b>timezone.</p>
             <br />
-            {/* <TimezoneSelect value={selectedTimezone} onChange={setSelectedTimezone} /> */}
+            <TimezoneSelect value={selectedTimezone} onChange={setSelectedTimezone} />
           </Notice>
           <Notice>
             <h3 className="text-center">Days</h3>
@@ -261,25 +269,25 @@ const Schedules = () => {
                 <div className="Agenda-column Agenda-column">
                   <Notice>
                     <h3 className="text-center">{roomName}</h3>
-                    <p>{spacetime(selectedTab).goto('Europe/Oslo').format('day')}</p>
+                    <p>{spacetime(selectedTab).goto(selectedTimezone.value).format('day')}</p>
                   </Notice>
                   {selectedTab
                     ? agenda[selectedTab][selectedRoomId].map((session) => (
-                        <ProgramSection
-                          key={session.id}
-                          session={session}
-                          selectedTimezone={selectedTimezone.value}
-                          speakers={speakers}
-                        />
-                      ))
+                      <ProgramSection
+                        key={session.id}
+                        session={session}
+                        selectedTimezone={selectedTimezone.value}
+                        speakers={speakers}
+                      />
+                    ))
                     : agenda[selectedDay][selectedRoomId].map((session) => (
-                        <ProgramSection
-                          key={session.id}
-                          session={session}
-                          selectedTimezone={selectedTimezone.value}
-                          speakers={speakers}
-                        />
-                      ))}
+                      <ProgramSection
+                        key={session.id}
+                        session={session}
+                        selectedTimezone={selectedTimezone.value}
+                        speakers={speakers}
+                      />
+                    ))}
                 </div>
               </div>
             </>

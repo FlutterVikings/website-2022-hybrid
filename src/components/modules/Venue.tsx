@@ -1,4 +1,3 @@
-import GatsbyImage from 'gatsby-image';
 import React from 'react';
 import { useAllFiles } from '../../hooks/useAllFiles';
 import { RelativeDirectory } from '../../models/file';
@@ -29,7 +28,7 @@ const Venue = () => {
               </h3>
             </Content>
             {images.map((img: any, index: number) => {
-              return <ImageWrapper key={index} image={img.childImageSharp} />;
+              return <ImageWrapper key={index} image={img.publicURL} />;
             })}
           </ResponsiveGrid>
           <br />

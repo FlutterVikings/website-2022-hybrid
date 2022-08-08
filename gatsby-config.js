@@ -21,7 +21,19 @@ module.exports = {
     'gatsby-plugin-remove-serviceworker',
     'gatsby-plugin-typescript',
     'gatsby-plugin-sass',
-    'gatsby-plugin-manifest',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `FlutterVikings`,
+        short_name: `FLVikings`,
+        start_url: `/`,
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
+        display: `standalone`,
+        lang: `en`,
+        icon: `./static/assets/logo-squre.png`,
+      },
+    },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-sitemap',
     {
