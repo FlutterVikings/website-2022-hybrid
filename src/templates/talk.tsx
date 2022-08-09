@@ -58,6 +58,7 @@ export default (props: { pageContext: { session: TitoSession, socialImage: strin
                             <TalkDetailRow>
                                 {startTime} | {findRoomById(session.roomId)?.name} room
                             </TalkDetailRow>
+                            <small> (Based on GMT+2 / Norway)</small>
                         </Header>
                         <Content>
                             {session.description}
@@ -83,7 +84,16 @@ export default (props: { pageContext: { session: TitoSession, socialImage: strin
                                 <Link className="Btn Btn--ticket Btn--cta" to="/">
                                     Back to homepage
                                 </Link>
+                                <a
+                                    className="Btn Btn--ticket Btn--cta"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://fluttervikings.com/ticket"
+                                >
+                                    Tickets
+                                </a>
                             </div>
+
                         </Content>
                     </Container>
                 </Section>

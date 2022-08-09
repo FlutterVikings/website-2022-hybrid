@@ -234,7 +234,7 @@ const Schedules = () => {
                 onClick={setTab(agendaDay)}
               >
                 <p className="Agenda-day">{agendaDay}</p>
-                <p className="Agenda-date">{spacetime(agendaDay).format('day')}</p>
+                <p className="Agenda-date">{spacetime(agendaDay).goto(selectedTimezone.value).format('day')}</p>
                 {(agendaDay === selectedDay || agendaDay === selectedTab) && (
                   <CheckMark />
                 )}
