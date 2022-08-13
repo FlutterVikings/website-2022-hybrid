@@ -91,7 +91,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `./data/images`,
+        path: `./static/data/images`,
       },
     },
     `gatsby-transformer-json`,
@@ -99,7 +99,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `api`,
-        path: `./data/api`,
+        path: `./static/data/api`,
       },
     },
     'gatsby-plugin-sharp',

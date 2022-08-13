@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ResponsiveGrid = styled.div<{ size?: number; fill?: string }>`
+export const ResponsiveGrid = styled.div<{ size?: number; fill?: string; }>`
   --auto-grid-min-size: ${(props) => (props.size ? props.size : '10')}rem;
   display: grid;
   grid-template-columns: repeat(

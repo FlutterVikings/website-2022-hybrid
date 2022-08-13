@@ -67,15 +67,17 @@ const SponsorsLevel = ({
   list,
   title,
   theme,
+  fill = 'auto-fill'
 }: {
   list: Sponsor[];
   title: string;
   theme: DefaultTheme;
+  fill?: string;
 }) => {
   return (
     <SponsorSection>
       <SponsorHeadline>{title}</SponsorHeadline>
-      <ResponsiveGrid>
+      <ResponsiveGrid fill={fill}>
         {list.map((sp) => (
           <SponsorCard key={sp.sponsor_id} theme={theme} sponsor={sp} />
         ))}
@@ -88,6 +90,7 @@ const Sponsors = () => {
   const images = useAllFiles(RelativeDirectory.sponsors);
   const sponsors = useSponsors(images);
   console.log(sponsors)
+  const platinum = sponsors.filter((s) => s.level === 0);
   const gold = sponsors.filter((s) => s.level === 1);
   const silver = sponsors.filter((s) => s.level === 2);
   const bronze = sponsors.filter((s) => s.level === 3);
@@ -98,6 +101,7 @@ const Sponsors = () => {
           <Section bgColor={theme.colors.sectionHighLight}>
             <Container>
               <MainTitle title="Our Supporters" titleStrokeText={'sponsors'} />
+              <SponsorsLevel title="Platinum" fill='none' list={platinum} theme={theme} />
               <SponsorsLevel title="Gold" list={gold} theme={theme} />
               <SponsorsLevel title="Silver" list={silver} theme={theme} />
               <SponsorsLevel title="Bronze" list={bronze} theme={theme} />

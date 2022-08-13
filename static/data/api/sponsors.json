@@ -3,7 +3,7 @@
     "sponsor_id": "google",
     "dark": "google-light",
     "name": "Google",
-    "level": 1,
+    "level": 0,
     "link": "https://bit.ly/3ps1AeP"
   },
   {
@@ -85,6 +85,7 @@
   },
   {
     "sponsor_id": "amplify",
+    "dark": "dark_amplify",
     "name": "AWS Amplify",
     "level": 1,
     "link": "https://go.aws/3BFujWo"
