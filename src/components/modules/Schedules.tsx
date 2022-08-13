@@ -226,20 +226,23 @@ const Schedules = () => {
             <h3 className="text-center">Days</h3>
           </Notice>
           <div className="Agenda-twoColumnContainer">
-            {Object.keys(agenda).map((agendaDay) => (
-              <AgendaTabButton
-                selected={agendaDay === selectedDay || agendaDay === selectedTab}
-                className="Agenda-columnTitle"
-                key={agendaDay}
-                onClick={setTab(agendaDay)}
-              >
-                <p className="Agenda-day">{agendaDay}</p>
-                <p className="Agenda-date">{spacetime(agendaDay).goto(selectedTimezone.value).format('day')}</p>
-                {(agendaDay === selectedDay || agendaDay === selectedTab) && (
-                  <CheckMark />
-                )}
-              </AgendaTabButton>
-            ))}
+            {Object.keys(agenda).map((agendaDay) => {
+              const formattedTime = spacetime(agendaDay).add(8, 'hour').goto(selectedTimezone.value);
+              return (
+                <AgendaTabButton
+                  selected={agendaDay === selectedDay || agendaDay === selectedTab}
+                  className="Agenda-columnTitle"
+                  key={agendaDay}
+                  onClick={setTab(agendaDay)}
+                >
+                  <p className="Agenda-day">{formattedTime.format('short')}</p>
+                  <p className="Agenda-date">{formattedTime.format('day')}</p>
+                  {(agendaDay === selectedDay || agendaDay === selectedTab) && (
+                    <CheckMark />
+                  )}
+                </AgendaTabButton>
+              )
+            })}
           </div>
           {selectedTab && selectedDay && (
             <>
@@ -269,7 +272,7 @@ const Schedules = () => {
                 <div className="Agenda-column Agenda-column">
                   <Notice>
                     <h3 className="text-center">{roomName}</h3>
-                    <p>{spacetime(selectedTab).goto(selectedTimezone.value).format('day')}</p>
+                    <p>{spacetime(selectedTab).add(8, 'hour').goto(selectedTimezone.value).format('day')}</p>
                   </Notice>
                   {selectedTab
                     ? agenda[selectedTab][selectedRoomId].map((session) => (
