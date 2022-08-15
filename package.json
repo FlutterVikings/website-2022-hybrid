@@ -111,5 +111,8 @@
     "tslint-react-a11y": "^1.1.0",
     "typescript": "^4.7.4",
     "typography": "^0.16.21"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
   }
 }
