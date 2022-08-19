@@ -8,19 +8,21 @@
   },
   {
     "sponsor_id": "microsoft",
+    "dark": "microsoft_light",
     "name": "Microsoft",
     "level": 3,
     "link": "https://bit.ly/3IyYnnx"
   },
   {
     "sponsor_id": "invertase",
-    "dark": "invertase-light",
+    "dark": "invertase_light",
     "name": "Invertase",
     "level": 1,
     "link": "https://bit.ly/3E3vCML"
   },
   {
     "sponsor_id": "stream",
+    "dark": "stream_light",
     "name": "Stream.io Inc",
     "level": 1,
     "link": "https://bit.ly/3MwtIIa"
@@ -131,5 +133,12 @@
     "name": "Cloudinary",
     "level": 3,
     "link": "https://bit.ly/34K3JNe"
+  },
+  {
+    "sponsor_id": "leadcode",
+    "dark": "leadcode_light",
+    "name": "Cloudinary",
+    "level": 3,
+    "link": "https://bit.ly/3wig5aq"
   }
 ]
