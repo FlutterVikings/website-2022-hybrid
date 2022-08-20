@@ -3,6 +3,7 @@
     "sponsor_id": "google",
     "dark": "google-light",
     "name": "Google",
+    "tagline": "",
     "level": 0,
     "link": "https://bit.ly/3ps1AeP"
   },
@@ -11,6 +12,7 @@
     "dark": "microsoft_light",
     "name": "Microsoft",
     "level": 3,
+    "tagline": "",
     "link": "https://bit.ly/3IyYnnx"
   },
   {
@@ -18,6 +20,7 @@
     "dark": "invertase_light",
     "name": "Invertase",
     "level": 1,
+    "tagline": "",
     "link": "https://bit.ly/3E3vCML"
   },
   {
@@ -25,12 +28,14 @@
     "dark": "stream_light",
     "name": "Stream.io Inc",
     "level": 1,
+    "tagline": "",
     "link": "https://bit.ly/3MwtIIa"
   },
   {
     "sponsor_id": "onesignal",
     "name": "OneSignal, Inc. ",
     "level": 3,
+    "tagline": "",
     "link": "https://bit.ly/3xx1dF1"
   },
   {
@@ -38,25 +43,29 @@
     "dark": "somniosoftware3",
     "name": "Somnio Software",
     "level": 3,
+    "tagline": "",
     "link": "https://bit.ly/3aU6vCK"
   },
   {
     "sponsor_id": "appwrite",
     "name": "Appwrite",
     "level": 1,
+    "tagline": "",
     "link": "https://bit.ly/3ayks98"
   },
   {
     "sponsor_id": "codemagic",
     "name": "Code Magic",
     "level": 1,
+    "tagline": "",
     "link": "https://bit.ly/3oE9qUj"
   },
   {
     "sponsor_id": "theatcompany",
     "dark": "theatcompany-light",
-    "name": "The @ Company",
+    "name": "atSign",
     "level": 1,
+    "tagline": "",
     "link": "https://bit.ly/36uvtT6"
   },
   {
@@ -64,25 +73,29 @@
     "dark": "vgv-light",
     "name": "Very Good Ventures",
     "level": 2,
+    "tagline": "",
     "link": "https://bit.ly/3CaUy4s"
   },
   {
     "sponsor_id": "softiware",
     "name": "Softiware AS",
     "level": 2,
+    "tagline": "",
     "link": "https://bit.ly/32E8LXS"
   },
   {
     "sponsor_id": "devangels",
     "dark": "devangels-light",
-    "name": "DebAngels London",
+    "name": "DevAngels London",
     "level": 2,
+    "tagline": "",
     "link": "https://bit.ly/3n3lv4s"
   },
   {
     "sponsor_id": "superlist",
     "name": "Superlist",
     "level": 1,
+    "tagline": "",
     "link": "https://bit.ly/3pL7UPE"
   },
   {
@@ -90,6 +103,7 @@
     "dark": "dark_amplify",
     "name": "AWS Amplify",
     "level": 1,
+    "tagline": "",
     "link": "https://go.aws/3BFujWo"
   },
   {
@@ -97,6 +111,7 @@
     "dark": "bouvet_light",
     "name": "Bouvet",
     "level": 2,
+    "tagline": "",
     "link": "https://bit.ly/35cCc7z"
   },
   {
@@ -104,6 +119,7 @@
     "dark": "ot_hovedlogo_light",
     "name": "Olavstoppen",
     "level": 2,
+    "tagline": "",
     "link": "https://bit.ly/3Iqvrxd"
   },
   {
@@ -111,6 +127,7 @@
     "dark": "talsecdark",
     "name": "Talsec",
     "level": 2,
+    "tagline": "",
     "link": "https://bit.ly/3boAG5J"
   },
   {
@@ -118,6 +135,7 @@
     "dark": "sentrydark",
     "name": "Sentry.io",
     "level": 2,
+    "tagline": "",
     "link": "https://bit.ly/3OQJ0IR"
   },
   {
@@ -125,6 +143,7 @@
     "dark": "rebelappstudio",
     "name": "Rebel app studio",
     "level": 1,
+    "tagline": "",
     "link": "https://bit.ly/3g6X9Ty"
   },
   {
@@ -132,6 +151,7 @@
     "dark": "cloudinary_light",
     "name": "Cloudinary",
     "level": 3,
+    "tagline": "",
     "link": "https://bit.ly/34K3JNe"
   },
   {
