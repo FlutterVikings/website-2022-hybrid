@@ -19,8 +19,12 @@ export const useSponsors = (images: FileImage[]): Sponsor[] => {
     }
   `);
   return items.edges.map((sp: any) => {
-    const image = images.find((img) => img.name === sp.node.sponsor_id);
-    const darkImage = images.find((img) => img.name === sp.node.dark);
+    const image = images.find((img) => {
+      return img.name === sp.node.sponsor_id && img.publicURL.endsWith('.svg')
+    });
+    const darkImage = images.find((img) => {
+      return img.name === sp.node.dark && img.publicURL.endsWith('.svg');
+    });
     return new Sponsor(sp.node, image, darkImage);
   });
 };
