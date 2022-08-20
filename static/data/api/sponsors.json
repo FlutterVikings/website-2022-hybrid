@@ -93,6 +93,7 @@
   },
   {
     "sponsor_id": "superlist",
+    "dark": "superlistlight",
     "name": "Superlist",
     "level": 1,
     "tagline": "",
