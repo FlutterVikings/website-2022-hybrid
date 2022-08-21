@@ -53,7 +53,7 @@ export default () => {
                 <Section>
                     <Container>
                         <Content>
-                            <div style={{ textAlign: 'center', paddingTop: '2rem;' }}>
+                            <div style={{ textAlign: 'center', paddingTop: '3rem;' }}>
                                 {badge && <iframe src={`https://docs.google.com/gview?url=${badge}&embedded=true`} style={{ border: 0, width: '700px', height: "930px" }} ></iframe>}
                                 {!badge && !error && <>Generating your badge... wait a moment</>}
                                 {error && <>{error}</>}
