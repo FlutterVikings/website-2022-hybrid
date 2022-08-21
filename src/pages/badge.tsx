@@ -58,7 +58,7 @@ export default () => {
                     <Container>
                         <Content>
                             <div style={{ textAlign: 'center', paddingTop: '3rem' }}>
-                                {badge && <a href={badge} target="_blank" rel="noopener noreferrer nofollow">Download</a>}
+                                {badge && <><a href={badge} target="_blank" rel="noopener noreferrer nofollow">Download</a><br /><br /></>}
                                 {badge && <iframe src={`https://docs.google.com/gview?url=${badge}&embedded=true`} style={{ border: 0, width: '700px', height: "930px" }} ></iframe>}
                                 {!badge && !error && <>Generating your badge... wait a moment</>}
                                 {error && <>{error}</>}
