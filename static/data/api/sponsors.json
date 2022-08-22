@@ -55,6 +55,7 @@
   },
   {
     "sponsor_id": "codemagic",
+    "dark": "codemagic-logo-white",
     "name": "Code Magic",
     "level": 1,
     "tagline": "",
@@ -78,6 +79,7 @@
   },
   {
     "sponsor_id": "softiware",
+    "dark": "softiware-light",
     "name": "Softiware AS",
     "level": 2,
     "tagline": "",
