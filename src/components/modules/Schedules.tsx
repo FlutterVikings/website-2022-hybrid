@@ -216,6 +216,15 @@ const Schedules = () => {
     <>
       <Section>
         <Container id="agenda">
+          <Notice>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://fluttervikings.com/ticket"
+            >
+              Get your Ticket
+            </a>
+          </Notice>
           <MainTitle title="Event Agenda" titleStrokeText={'Schedule'} />
           <Notice>
             <p>The schedule time is based on <b style={{ color: '#cebd00' }}>{selectedTimezone.label.split(')')[0].split('(')[1]}  ({selectedTimezone.abbrev}) </b>timezone.</p>

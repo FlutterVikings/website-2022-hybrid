@@ -45,9 +45,8 @@ const Nav = () => {
         {(theme: VikingTheme) => {
           return (
             <div
-              className={`Nav ${isOpen ? 'Nav--open' : 'Nav--away'} ${
-                hideOnScroll ? '' : 'Nav--scrolled'
-              }`}
+              className={`Nav ${isOpen ? 'Nav--open' : 'Nav--away'} Nav--scrolled
+                }`}
             >
               <div
                 className="Nav-bar"
@@ -77,7 +76,7 @@ const Nav = () => {
                   <span className="Nav-title">
                     <span className="font__caesar">Flutter Vikings</span>
                     <br />
-                    2022
+                    Oslo 2022
                   </span>
                 </a>
               </div>

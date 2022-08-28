@@ -14,7 +14,7 @@ const Speakers = () => {
     <>
       <ThemeConsumer>
         {(theme) => (
-          <Section bgColor={theme.colors.sectionHighLight}>
+          <Section >
             <Container>
               <MainTitle title={`Amazing Line-Up`} titleStrokeText={'speakers'} />
               <ResponsiveGrid>

@@ -17,15 +17,15 @@ export default () => {
     <NiceModal.Provider>
       <Layout>
         <SEO />
-        <Scene />
+        <Schedules />
+        {/* <Scene /> */}
+        <Sponsors />
+        <Speakers />
+        <Venue />
         <TheEvent />
         <Diversity />
-        <Speakers />
-        <Schedules />
         {/* <Moderators /> */}
-        <Sponsors />
         {/* <Communities /> */}
-        <Venue />
       </Layout>
     </NiceModal.Provider>
   );
