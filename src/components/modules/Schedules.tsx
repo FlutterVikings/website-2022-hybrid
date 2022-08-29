@@ -244,7 +244,7 @@ const Schedules = () => {
               style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}
             >
               <a target="_blank" rel="noopener noreferrer" href="https://bit.ly/3Rk8qk0">
-                <img width={'120px'} alt="GooglePlay" src="/assts/dlgoogle.png" />
+                <img width={'120px'} alt="GooglePlay" src="/assets/dlgoogle.png" />
               </a>
               <div style={{ width: '1rem' }}></div>
               <a
@@ -252,7 +252,7 @@ const Schedules = () => {
                 rel="noopener noreferrer"
                 href="https://apple.co/3Ktn5XK"
               >
-                <img width={'120px'} alt="AppleStore" src="/assts/dlapple.webp" />
+                <img width={'120px'} alt="AppleStore" src="/assets/dlapple.webp" />
               </a>
             </div>
             <p>
