@@ -25,8 +25,8 @@ const ProgramSection = ({ session, selectedTimezone, speakers }: Props) => {
   const startTime = spacetime(session.startsAt).goto(selectedTimezone).time();
   const endsTime = spacetime(session.endsAt).goto(selectedTimezone).time();
 
-  const getSpeakersName = (session: TitoSession): string => session.speakers.reduce(
-    (acc, s, i) => {
+  const getSpeakersName = (session: TitoSession): string =>
+    session.speakers.reduce((acc, s, i) => {
       const presenter = speakers.filter((sp) => sp.id === s.toString())[0];
       acc += `${presenter.fullName}`;
       if (i < session.speakers.length - 1) {
@@ -39,18 +39,30 @@ const ProgramSection = ({ session, selectedTimezone, speakers }: Props) => {
     <>
       <div
         key={session.id}
-        className={`Event${session.speakers.length > 0 ? ' Event--talk' : ''}${session.isServiceSession ? ' Event--lunch' : ''
-          }`}
+        className={`Event${session.speakers.length > 0 ? ' Event--talk' : ''}${
+          session.isServiceSession ? ' Event--lunch' : ''
+        }`}
       >
         <div className="Event-time">
           {startTime} - {endsTime}
         </div>
         <div className="Event-details">
           <span className="Event-name">
-            {!session.isServiceSession ? <a
-              target='_blank'
-              rel={'noreferrer noopener nofollow'}
-              href={`/${slugify(session.title, { lower: true, trim: true, strict: true })}`}>🔗 {session.title}</a> : session.title}
+            {!session.isServiceSession ? (
+              <a
+                target="_blank"
+                rel={'noreferrer noopener nofollow'}
+                href={`/${slugify(session.title, {
+                  lower: true,
+                  trim: true,
+                  strict: true,
+                })}`}
+              >
+                🔗 {session.title}
+              </a>
+            ) : (
+              session.title
+            )}
           </span>
           {session.speakers.length > 0 && (
             <>
@@ -117,9 +129,9 @@ const AgendaTabButton = styled.button<{ selected?: boolean }>`
   cursor: pointer;
   border: 3px solid
     ${(props) =>
-    props.selected
-      ? props.theme.colors.logoLightBlue
-      : props.theme.colors.logoDarkBlue};
+      props.selected
+        ? props.theme.colors.logoLightBlue
+        : props.theme.colors.logoDarkBlue};
   background: ${(props) => props.theme.colors.sectionbg};
   color: ${(props) =>
     props.theme.isDark ? props.theme.colors.white : props.theme.colors.black};
@@ -130,11 +142,11 @@ const AgendaTabButton = styled.button<{ selected?: boolean }>`
   }
 `;
 
-const Notice = styled.div`
+const Notice = styled.div<{ noPadding?: boolean }>`
   color: ${(props) =>
     props.theme.isDark ? props.theme.colors.white : props.theme.colors.black};
   text-align: center;
-  padding: 3rem 0;
+  padding: ${(props) => (props.noPadding ? '3rem 0' : '0')};
   font-size: 1.7rem;
 
   .css-2b097c-container,
@@ -142,7 +154,7 @@ const Notice = styled.div`
   .css-1pahdxg-control,
   .css-26l3qy-menu {
     background: ${(props) =>
-    props.theme.isDark ? props.theme.colors.black : props.theme.colors.grey};
+      props.theme.isDark ? props.theme.colors.black : props.theme.colors.grey};
     text-align: left;
     :hover,
     :focus {
@@ -152,7 +164,7 @@ const Notice = styled.div`
   .css-1uccc91-singleValue,
   .css-b8ldur-Input {
     color: ${(props) =>
-    props.theme.isDark ? props.theme.colors.white : props.theme.colors.black};
+      props.theme.isDark ? props.theme.colors.white : props.theme.colors.black};
   }
 `;
 
@@ -225,9 +237,32 @@ const Schedules = () => {
               Get your Ticket
             </a>
           </Notice>
+
           <MainTitle title="Event Agenda" titleStrokeText={'Schedule'} />
-          <Notice>
-            <p>The schedule time is based on <b style={{ color: '#cebd00' }}>{selectedTimezone.label.split(')')[0].split('(')[1]}  ({selectedTimezone.abbrev}) </b>timezone.</p>
+          <Notice noPadding={false}>
+            <div
+              style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}
+            >
+              <a target="_blank" rel="noopener noreferrer" href="https://bit.ly/3Rk8qk0">
+                <img width={'120px'} alt="GooglePlay" src="/dlgoogle.png" />
+              </a>
+              <div style={{ width: '1rem' }}></div>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://apple.co/3Ktn5XK"
+              >
+                <img width={'120px'} alt="AppleStore" src="/dlapple.webp" />
+              </a>
+            </div>
+            <p>
+              The schedule time is based on{' '}
+              <b style={{ color: '#cebd00' }}>
+                {selectedTimezone.label.split(')')[0].split('(')[1]} (
+                {selectedTimezone.abbrev}){' '}
+              </b>
+              timezone.
+            </p>
             <br />
             <TimezoneSelect value={selectedTimezone} onChange={setSelectedTimezone} />
           </Notice>
@@ -236,7 +271,9 @@ const Schedules = () => {
           </Notice>
           <div className="Agenda-twoColumnContainer">
             {Object.keys(agenda).map((agendaDay) => {
-              const formattedTime = spacetime(agendaDay).add(8, 'hour').goto(selectedTimezone.value);
+              const formattedTime = spacetime(agendaDay)
+                .add(8, 'hour')
+                .goto(selectedTimezone.value);
               return (
                 <AgendaTabButton
                   selected={agendaDay === selectedDay || agendaDay === selectedTab}
@@ -250,7 +287,7 @@ const Schedules = () => {
                     <CheckMark />
                   )}
                 </AgendaTabButton>
-              )
+              );
             })}
           </div>
           {selectedTab && selectedDay && (
@@ -281,25 +318,30 @@ const Schedules = () => {
                 <div className="Agenda-column Agenda-column">
                   <Notice>
                     <h3 className="text-center">{roomName}</h3>
-                    <p>{spacetime(selectedTab).add(8, 'hour').goto(selectedTimezone.value).format('day')}</p>
+                    <p>
+                      {spacetime(selectedTab)
+                        .add(8, 'hour')
+                        .goto(selectedTimezone.value)
+                        .format('day')}
+                    </p>
                   </Notice>
                   {selectedTab
                     ? agenda[selectedTab][selectedRoomId].map((session) => (
-                      <ProgramSection
-                        key={session.id}
-                        session={session}
-                        selectedTimezone={selectedTimezone.value}
-                        speakers={speakers}
-                      />
-                    ))
+                        <ProgramSection
+                          key={session.id}
+                          session={session}
+                          selectedTimezone={selectedTimezone.value}
+                          speakers={speakers}
+                        />
+                      ))
                     : agenda[selectedDay][selectedRoomId].map((session) => (
-                      <ProgramSection
-                        key={session.id}
-                        session={session}
-                        selectedTimezone={selectedTimezone.value}
-                        speakers={speakers}
-                      />
-                    ))}
+                        <ProgramSection
+                          key={session.id}
+                          session={session}
+                          selectedTimezone={selectedTimezone.value}
+                          speakers={speakers}
+                        />
+                      ))}
                 </div>
               </div>
             </>
