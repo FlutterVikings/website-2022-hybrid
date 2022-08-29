@@ -162,6 +162,7 @@
     "dark": "leadcode_light",
     "name": "Cloudinary",
     "level": 3,
+    "tagline": "",
     "link": "https://bit.ly/3wig5aq"
   },
   {
@@ -169,6 +170,7 @@
     "dark": "tidelight",
     "name": "Tide",
     "level": 3,
+    "tagline": "Tide is a financial platform which helps SMEs save time (and money) in the running of their businesses by not only offering business accounts and related banking services, but also a comprehensive set of highly usable administrative solutions. In other words - The Tide app helps streamline processes such as invoicing, expense management, accounting and payroll  through automation, and smart, intuitive tools. The needs of SMEs globally are largely universal, with time wasted on business and administrative tasks being a key issue. Tide exists to fix that problem. Tide has developed the right approach and a mix of services to meet the diverse needs of small businesses. Specific projects include a global transition to Flutter, creating an innovative proposition in the Open Banking space, managing multiple migrations to continuously improve the user experience, as well as building and improving Tide products each day. Tide is currently a big player in the UK business banking market on its way to scale globally. The headquarters of the company are located in London. The core divisions are based in Sofia, Bulgaria and in Hyderabad, India.",
     "link": "https://bit.ly/3R3Q7Qo"
   }
 ]
