@@ -43,7 +43,7 @@
     "dark": "somniosoftware3",
     "name": "Somnio Software",
     "level": 3,
-    "tagline": "",
+    "tagline": "Somnio Software is the first & only 100% Flutter-focused Software Development Company in LATAM. We have been early adopters and have worked with Flutter exclusively since 2019. Thus, Somnio & Flutter were born almost simultaneously and have grown hand in hand. Creating a team of Flutter experts was our main goal so that we could design, build and scale apps in record time with native performance. Now we are +40 Flutter enthusiasts with engineers, developers and designers ready to help our partners grow their business. Benefit from our experience using Flutter since the beginning & join the Flutter Transformation! Build Apps for any screen: ► Mobile Development ► Web Development ► Desktop Development ► UX/UI Design Whether you want to create a product from scratch or you need an addition to your in-house team, we are your trusted partner. Let’s create successful Flutter apps together!",
     "link": "https://bit.ly/3aU6vCK"
   },
   {
@@ -58,7 +58,7 @@
     "dark": "codemagic-logo-white",
     "name": "Code Magic",
     "level": 1,
-    "tagline": "",
+    "tagline": "Codemagic - your friendly CI/CD for Flutter developers. Automatically build, test and deliver mobile apps in record time. All platforms. Great docs.",
     "link": "https://bit.ly/3oE9qUj"
   },
   {
@@ -66,7 +66,7 @@
     "dark": "theatcompany-light",
     "name": "atSign",
     "level": 1,
-    "tagline": "",
+    "tagline": "Atsign is a community of Internet optimists compelled by the belief that privacy is a fundamental right. We created the open-source atPlatform so developers can build decentralized apps that do not rely on blockchain. The atPlatform is written in Dart and all the apps are developed with Flutter. On the atPlatform, data is cryptographically signed and end-to-end encrypted between mutually authenticated endpoints. For IoT devices, the atPlatform eliminates the complexity and cost of VPNs and firewall infrastructure while actually increasing security. All atPlatform apps are accessed via a unique identification and authentication approach: the atSign — the key for people to reclaim their power online.",
     "link": "https://bit.ly/36uvtT6"
   },
   {
@@ -98,7 +98,7 @@
     "dark": "superlistlight",
     "name": "Superlist",
     "level": 1,
-    "tagline": "",
+    "tagline": "Superlist is the next generation productivity tool for individuals and teams alike. With Superlist you and your team can plan, collaborate, and get it all done - and feel good about it. Available on all major platforms, Superlist will accompany you and be there for you whenever you need it, helping you stay on top of everything you need to keep track of.",
     "link": "https://bit.ly/3pL7UPE"
   },
   {
