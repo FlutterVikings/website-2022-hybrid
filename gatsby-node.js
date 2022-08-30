@@ -14,6 +14,15 @@ exports.createPages = async ({ page, graphql, actions }) => {
   const result = await graphql(
     `
       {
+        allActivityJson {
+          nodes {
+            activity_id
+            title
+            intro
+            content
+            url
+          }
+        }
         allRestApiApiV28Wk2U51QViewAll {
           nodes {
             speakers {
@@ -70,8 +79,10 @@ exports.createPages = async ({ page, graphql, actions }) => {
     reporter.panicOnBuild(`Error while running GraphQL query.`);
     return;
   }
+  const activities = result.data.allActivityJson.nodes;
   const sessions = result.data.allRestApiApiV28Wk2U51QViewAll.nodes[0].sessions;
   const talkTemplate = path.resolve(`src/templates/talk.tsx`);
+  const activityTemplate = path.resolve(`src/templates/activity.tsx`);
   const talkPreviewTemplate = path.resolve(`src/templates/talk_preview.tsx`);
   const cacheTalkFile = path.join('./.cache/talks.txt');
   fs.writeFileSync(cacheTalkFile, '');
@@ -101,4 +112,14 @@ exports.createPages = async ({ page, graphql, actions }) => {
         });
       }
     });
+
+  activities.forEach((activity) => {
+    createPage({
+      path: '/' + activity.url.replace('https://fluttervikings.com/', ''),
+      component: activityTemplate,
+      context: {
+        activity: activity,
+      },
+    });
+  });
 };
