@@ -244,7 +244,7 @@ const Schedules = () => {
               Activities & Prizes
             </a>
           </Notice>
-
+          <br />
           <MainTitle title="Event Agenda" titleStrokeText={'Schedule'} />
           <Notice noPadding={false}>
             <div
