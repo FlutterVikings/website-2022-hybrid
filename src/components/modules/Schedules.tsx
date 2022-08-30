@@ -39,9 +39,8 @@ const ProgramSection = ({ session, selectedTimezone, speakers }: Props) => {
     <>
       <div
         key={session.id}
-        className={`Event${session.speakers.length > 0 ? ' Event--talk' : ''}${
-          session.isServiceSession ? ' Event--lunch' : ''
-        }`}
+        className={`Event${session.speakers.length > 0 ? ' Event--talk' : ''}${session.isServiceSession ? ' Event--lunch' : ''
+          }`}
       >
         <div className="Event-time">
           {startTime} - {endsTime}
@@ -129,9 +128,9 @@ const AgendaTabButton = styled.button<{ selected?: boolean }>`
   cursor: pointer;
   border: 3px solid
     ${(props) =>
-      props.selected
-        ? props.theme.colors.logoLightBlue
-        : props.theme.colors.logoDarkBlue};
+    props.selected
+      ? props.theme.colors.logoLightBlue
+      : props.theme.colors.logoDarkBlue};
   background: ${(props) => props.theme.colors.sectionbg};
   color: ${(props) =>
     props.theme.isDark ? props.theme.colors.white : props.theme.colors.black};
@@ -154,7 +153,7 @@ const Notice = styled.div<{ noPadding?: boolean }>`
   .css-1pahdxg-control,
   .css-26l3qy-menu {
     background: ${(props) =>
-      props.theme.isDark ? props.theme.colors.black : props.theme.colors.grey};
+    props.theme.isDark ? props.theme.colors.black : props.theme.colors.grey};
     text-align: left;
     :hover,
     :focus {
@@ -164,7 +163,7 @@ const Notice = styled.div<{ noPadding?: boolean }>`
   .css-1uccc91-singleValue,
   .css-b8ldur-Input {
     color: ${(props) =>
-      props.theme.isDark ? props.theme.colors.white : props.theme.colors.black};
+    props.theme.isDark ? props.theme.colors.white : props.theme.colors.black};
   }
 `;
 
@@ -235,6 +234,14 @@ const Schedules = () => {
               href="https://fluttervikings.com/ticket"
             >
               Get your Ticket
+            </a>
+            {' '} |{' '}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://fluttervikings.com/activities"
+            >
+              Activities & Prizes
             </a>
           </Notice>
 
@@ -327,21 +334,21 @@ const Schedules = () => {
                   </Notice>
                   {selectedTab
                     ? agenda[selectedTab][selectedRoomId].map((session) => (
-                        <ProgramSection
-                          key={session.id}
-                          session={session}
-                          selectedTimezone={selectedTimezone.value}
-                          speakers={speakers}
-                        />
-                      ))
+                      <ProgramSection
+                        key={session.id}
+                        session={session}
+                        selectedTimezone={selectedTimezone.value}
+                        speakers={speakers}
+                      />
+                    ))
                     : agenda[selectedDay][selectedRoomId].map((session) => (
-                        <ProgramSection
-                          key={session.id}
-                          session={session}
-                          selectedTimezone={selectedTimezone.value}
-                          speakers={speakers}
-                        />
-                      ))}
+                      <ProgramSection
+                        key={session.id}
+                        session={session}
+                        selectedTimezone={selectedTimezone.value}
+                        speakers={speakers}
+                      />
+                    ))}
                 </div>
               </div>
             </>
