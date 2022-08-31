@@ -246,13 +246,6 @@ const Schedules = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://fluttervikings.com/activities"
-            >
-              Activities & Prizes
-            </a>{' '} |{' '}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
               href="https://www.youtube.com/playlist?list=PL4dBIh1xps-EWXK28Qn9kiLK9-eXyqKLX"
             >
               LiveStream playlist
