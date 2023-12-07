@@ -254,7 +254,7 @@ const Schedules = () => {
               LiveStream playlist
             </a> */}
           </Notice>
-          <br />
+           {/* <br />
           <MainTitle title="Event Agenda" titleStrokeText={'Schedule'} />
           <Notice noPadding={false}>
             <div
@@ -362,7 +362,7 @@ const Schedules = () => {
                 </div>
               </div>
             </>
-          )}
+          )}*/}
         </Container>
       </Section>
     </>
