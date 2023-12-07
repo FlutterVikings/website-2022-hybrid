@@ -17,13 +17,16 @@ export default () => {
     <NiceModal.Provider>
       <Layout>
         <SEO />
-        <Schedules />
+        <center>
+          <h3>With heavy hearts, we announce FlutterVikings 2024 will not happen. Scheduling conflicts with other great community events have made it impossible to host the conference again. We're incredibly grateful for the amazing community of Flutter developers who have supported us💙</h3>
+        </center>
+        {/* <Schedules /> */}
         {/* <Scene /> */}
-        <Sponsors />
-        <Speakers />
-        <Venue />
-        <TheEvent />
-        <Diversity />
+        {/* <Sponsors /> */}
+        {/* <Speakers /> */}
+        {/* <Venue /> */}
+        {/* <TheEvent /> */}
+        {/* <Diversity /> */}
         {/* <Moderators /> */}
         {/* <Communities /> */}
       </Layout>
