@@ -228,7 +228,10 @@ const Schedules = () => {
       <Section>
         <Container id="agenda">
           <Notice>
-            <a
+                   <center>
+          <h3>With heavy hearts, we announce FlutterVikings 2024 will not happen. Scheduling conflicts with other great community events have made it impossible to host the conference again. We're incredibly grateful for the amazing community of Flutter developers who have supported us💙</h3>
+        </center>
+            {/* <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://fluttervikings.com/ticket"
@@ -249,7 +252,7 @@ const Schedules = () => {
               href="https://www.youtube.com/playlist?list=PL4dBIh1xps-EWXK28Qn9kiLK9-eXyqKLX"
             >
               LiveStream playlist
-            </a>
+            </a> */}
           </Notice>
           <br />
           <MainTitle title="Event Agenda" titleStrokeText={'Schedule'} />
